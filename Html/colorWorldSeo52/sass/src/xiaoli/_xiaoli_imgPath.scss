@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*********************************************公用库*****************************************************/
+@import "../../libs/Library";
+@import "../../libs/codeBlock";
+/*********************************************自己图片路径**********************************************/
+
+%header_return{
+  background: url("../images/public/developer_l/header_return.png") no-repeat center;
+  background-size: pxChangeRem(20);
+}
+%header_arrowBottm{
+  background: url("../images/public/developer_l/header_arrowBottm.png") no-repeat right center;
+  background-size: pxChangeRem(36);
+}
+%header_arrowTop{
+  background: url("../images/public/developer_l/header_arrowTop.png") no-repeat right center;
+  background-size: pxChangeRem(36);
+}
+%header_dateBg{
+  background: url("../images/public/developer_l/header_dateBg.png") no-repeat;
+  background-size: pxChangeRem(72);
+}
+
+%header_dateBg2{
+  background: url("../images/public/developer_l/header_dateBg2.png") no-repeat;
+  background-size: pxChangeRem(72);
+}
+
+%header_videoBg{
+  background: url("../images/public/developer_l/header_videoBg.png") no-repeat;
+  background-size: pxChangeRem(130);
+}
+
+%header_videoBg2{
+  background: url("../images/public/developer_l/header_videoBg2.png") no-repeat;
+  background-size: pxChangeRem(130);
+}
+
+%header_help{
+  background: url("../images/public/developer_l/header_help.png") no-repeat;
+  background-size: pxChangeRem(36);
+}
+%header_help2{
+  background: url("../images/public/developer_l/header_help2.png") no-repeat;
+  background-size: pxChangeRem(36);
+}
+
+%header_set{
+  background: url("../images/public/developer_l/header_set.png") no-repeat;
+  background-size: pxChangeRem(36);
+}
+%app_colorStyle1{
+  background: url("../images/public/developer_l/app_colorStyle1.png") no-repeat;
+  background-size: pxChangeRem(38);
+}
+%table_requirementBg{
+  background: url("../images/public/developer_l/table_requirementBg.png") no-repeat;
+  background-size: pxChangeRem(28);
+}
+%app_colorStyle3{
+  background: url("../images/public/developer_l/app_colorStyle3.png") no-repeat;
+  background-size: pxChangeRem(42);
+}
+%table_numberBg{
+  background: url("../images/public/developer_l/table_numberBg.png") no-repeat;
+  background-size: pxChangeRem(36);
+}
+%video_tips_close{
+  background: url("../images/public/developer_l/video_tips_close.png") no-repeat center;
+  background-size: pxChangeRem(16);
+}
+%public_blackOpacity60{
+  background: url("../images/public/developer_l/public_blackOpacity60.png");
+}
+%gdklsf_numberBg{
+  background: url("../images/public/developer_l/gdklsf_numberBg.png") no-repeat center;
+  background-size: pxChangeRem(40);
+}

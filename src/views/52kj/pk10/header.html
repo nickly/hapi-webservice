@@ -1,0 +1,58 @@
+
+
+        <div class="header_info">
+            {{#if lottery.hasdate}}
+            <span class="header_date"><input value="{{lottery.day}}" date="{{lottery.date}}" class="header_dateInput" readonly="true" onfocus="this.blur()" id="date"><span class="font">{{lottery.day}}</span></span>
+            {{/if}}
+            <span class="header_text"><i>距0期开奖：</i><b>00:00</b></span>
+            <span class="header_video"><a href="/pk10/video">开奖直播</a></span>
+            {{#if Help}}
+            <span class="header_help"></span>
+             {{/if}}
+            {{#if lottery.config}}
+            <span class="header_set"></span> 
+            {{/if}}
+        </div>
+
+        <div class="header_select">
+            <div class="header_selectBlock">
+                <div class="app_swiperSelectBlock" id="app_swiperSelect">
+                    <table move="0">
+                        <tbody>
+                        <tr>
+                            <td data-method='history'  {{#ifExt router.action 'history' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/history">历史开奖</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'bigorsmall' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/bigorsmall">单双大小路珠</a></span>
+                            </td>
+                             <td {{#ifExt router.action 'guanyahe' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/guanyahe">冠亚和路珠</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'todaystat' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/todaystat">今日号码统计</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'hotcoldnumber' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/hotcoldnumber">冷热码分析</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'betgame' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/betgame">推荐计划</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'numberstat' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/numberstat">龙虎历史</a></span>
+                            </td>
+                            <td {{#ifExt router.action 'killnumber' 'eq'}} class="active" {{/ifExt}}>
+                                <span><a href="/pk10/killnumber">杀号定胆</a></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="app_swiperSelectMore" id="selectMoreButton"></div>
+            </div>
+            <div class="header_selectList" id="header_selectList">
+                <ul>
+
+                </ul>
+            </div>
+        </div>

@@ -1,0 +1,81 @@
+<div class="header_info" {{#ifExt router.action 'video' 'eq' }}style='display:none' {{/ifExt}}>
+    {{#if Header.showDate}}
+    <span class="header_date"><input value="{{Header.ymd}}"  class="header_dateInput"  readonly="true" onfocus="this.blur()" id="date" ><span class="font">{{Header.md}}</span></span>
+    {{/if}}
+    <span class="header_text"><i>距000期开奖：</i><b>00:00</b></span>
+    <span class="header_video"><a href="/xync/video">开奖直播</a></span> {{#if Help}}
+    <span class="header_help"></span> {{/if}}
+</div>
+{{#ifExt router.action 'video' 'noeq' }}
+<div class="header_select header_select_jsk3">
+    <div class="header_selectBlock">
+        <div class="app_swiperSelectBlock" id="app_swiperSelect">
+            <table>
+                <tr>
+                    <td id="historyLink">
+                        <span> <a href="/xync/history">历史开奖</a></span>
+                    </td>
+                    <td id="bigorsmallLink">
+                        <span><a href="/xync/bigorsmall">单双大小路珠</a></span>
+                    </td>
+                    <td id="totalLink">
+                        <span> <a href="/xync/total">总和路珠</a></span>
+                    </td>
+                    <!--<td id="betGameLink">
+                        <a href="/xync/betGame"><span>免费推荐</span></a>
+                    </td>-->
+                </tr>
+            </table>
+        </div>
+        <!--<div class="app_swiperSelectMore" id="selectMoreButton"></div>-->
+    </div>
+    <div class="header_selectList" id="header_selectList">
+        <ul>
+            <li>
+                <a href="/xync/history"><span>历史开奖</span></a>
+            </li>
+            <li>
+                <a href="/xync/bigorsmall"><span>单双大小路珠</span></a>
+            </li>
+            <li>
+                <a href="/xync/total"><span>总和路珠</span></a>
+            </li>
+            <!--<li>
+                <a href="/xync/betGame"><span>免费推荐</span></a>
+            </li>-->
+        </ul>
+    </div>
+</div>
+{{#ifExt router.action 'bigorsmall' 'eq'}}
+<div class="app_selectBlockNav" id="app_selectBlockNav">
+    <div class="app_selectBlockNav_uls">
+        <div class="app_selectBlockNav_lis ">
+            <span class="active_arrow"></span>
+            <span class="content" data-attr="球号">全部球号<i></i></span>
+        </div>
+        <div class="app_selectBlockNav_lis">
+            <span class="active_arrow"></span>
+            <span class="content" data-attr="两面">全部两面<i></i></span>
+        </div>
+    </div>
+
+    <div class="app_selectBlockNavCons">
+        <ul data-attr="球号">
+            <li><span>第一球</span></li>
+            <li><span>第二球</span></li>
+            <li><span>第三球</span></li>
+            <li><span>第四球</span></li>
+            <li><span>第五球</span></li>
+            <li><span>第六球</span></li>
+            <li><span>第七球</span></li>
+            <li><span>第八球</span></li>
+            <li class="active"><span>全部球号</span></li>
+        </ul>
+        <ul data-attr="两面" style="display: none;">
+            <li><span>单双</span></li>
+            <li><span>大小</span></li>
+            <li class="active"><span>全部两面</span></li>
+        </ul>
+    </div>
+</div>
+{{/ifExt}} {{/ifExt}}

@@ -1,0 +1,16 @@
+apps:
+     script: ./index.js
+     name: 'csj-seo-beta'
+     watch: false
+     env: 
+       NODE_ENV: production
+       HTTP_PORT: 7002
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 74  #广告站点ID
+       VERSION: beta     
+       LOGGER_UDP_IP:  '192.168.8.22'
+       LOGGER_UDP_PORT: 20001
+       LOGGER_IS_SEND: true
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  

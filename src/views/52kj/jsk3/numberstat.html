@@ -1,0 +1,75 @@
+ {{#section 'css'}}
+<!-- css内容 -->
+{{/section}} {{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/jsk3/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+
+<section class="app_index_Scope">
+    <div class="app_public_statisticsBlock">
+
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                <table style='width:100%'>
+                    <tr class="titleBg title">
+                        <td><span class="titleW" style='width:2.5975rem;'>日期</span></td>
+                        <td><span class="range">1</span></td>
+                        <td><span class="range">2</span></td>
+                        <td><span class="range">3</span></td>
+                        <td><span class="range">4</span></td>
+                        <td><span class="range">5</span></td>
+                        <td><span class="range">6</span></td>
+                        <td><span class="range">大</span></td>
+                        <td><span class="range">小</span></td>
+                    </tr>
+
+                    {{#if dataList}} {{#each dataList}}
+                    <tr>
+                        <td class="titleBg"><span class="titleW">{{iDate StatDate}}</span></td>
+                        <td><span class="range">{{Num1}}</span></td>
+                        <td><span class="range">{{Num2}}</span></td>
+                        <td><span class="range">{{Num3}}</span></td>
+                        <td><span class="range">{{Num4}}</span></td>
+                        <td><span class="range">{{Num5}}</span></td>
+                        <td><span class="range">{{Num6}}</span></td>
+                        <td><span class="range">{{Big}}</span></td>
+                        <td><span class="range">{{Small}}</span></td>
+                    </tr>
+                    {{/each}} {{else}}
+                    <tr>
+                        <td colspan="9"><span class="range">没有获取到数据</span></td>
+                    </tr>
+                    {{/if}}
+
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{{> 52kj/partials/help }} {{#section 'footer'}}
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/jsk3/numberstat'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, indexCallBack) {
+        //publicCallBack.createLoading($('#loading'));
+        $(document).ready(function() {
+            indexCallBack.init();
+        });
+    });
+</script>
+{{/section}}

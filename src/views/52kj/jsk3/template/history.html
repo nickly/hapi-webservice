@@ -1,0 +1,23 @@
+  {{#if historyList}} 
+            {{#each historyList}}
+             <tr>
+                <td>{{PeriodNumber}}</td>
+                <td>{{iDateTime DrawingTime}}</td>
+                <td><div class="app_lotteryStyle3">
+                     {{#each NumberList}}
+                    <span><i class="num{{this}}">{{this}}</i></span>
+                     {{/each}}
+                </div></td>
+                <td><div class="app_lottery_jsk3">
+                    <i>{{NumbersTotal}}</i>
+                    <i class="{{k3SumBSTextCss NumberList}}">{{k3SumBS NumberList}}</i>
+                </div></td>
+            </tr>
+            {{/each}} 
+            {{else}}
+            <tr>
+                <td colspan="4">
+                    <p>没有获取到数据</p>
+                </td>
+            </tr>
+            {{/if}}

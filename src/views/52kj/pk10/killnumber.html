@@ -1,0 +1,77 @@
+{{#section 'css'}}
+<!-- css内容 -->
+{{/section}}
+
+{{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/pk10/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+ {{#section 'condition'}}
+ <div class="app_selectBlockNav" id="app_selectBlockNav">
+                <div class="app_selectBlockNav_uls">
+                    <div class="app_selectBlockNav_lis ">
+                        <span class="active_arrow"></span>
+                        <span class="content" id="spBall" data-ball="1">冠军<i></i></span>
+                    </div>
+                    <div class="app_selectBlockNav_lis">
+                        <span class="active_arrow"></span>
+                        <span class="content" id="spIssue" data-issue="20">近20期<i></i></span>
+                    </div>
+                </div>
+
+                <div class="app_selectBlockNavCons">
+                    <ul  id="chkBall">
+                    {{#each balls}}
+						{{#ifExt @index 0 'eq'}} 
+							 <li class="active" data-ball="1"><span>{{this}}</span></li>
+						{{else}}
+							<li data-ball="{{sum @index 1}}"><span>{{this}}</span></li>
+						{{/ifExt}}
+                    {{/each}}
+                    </ul>
+                    <ul style="display: none;"  id="chkIssue">
+                        <li data-issue="10"><span>10期</span></li>
+                        <li class="active" data-issue="20"><span>20期</span></li>
+                        <li  data-issue="50"><span>50期</span></li>
+                        <li  data-issue="100"><span>100期</span></li>
+                    </ul>
+                </div>
+
+            </div>
+{{/section}}
+<section class="app_index_Scope">
+
+    <div class="app_shaHaoDingDan_text">杀号：专家认为当期不可能开出的号码</div>
+
+    <div class="app_public_statisticsBlock app_shddBlock" id='data_result'>
+       {{> 52kj/pk10/template/killnumber }}
+    </div>
+</section>
+
+<!--帮助说明弹窗-->
+{{> 52kj/partials/help }}
+
+{{#section 'js'}}
+<script type="text/javascript">
+
+    var pathArray = [
+        'public/index',
+        'lottery/pk10/killnumber'
+    ];
+
+    seajs.use(pathArray ,function (publicCallBack,indexCallBack) {
+
+        /** 添加loading */
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        })
+    })
+</script>
+{{/section}}

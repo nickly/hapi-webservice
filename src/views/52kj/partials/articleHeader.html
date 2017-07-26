@@ -1,0 +1,10 @@
+<div class="app_headerSection pinned app_public_header">
+    <div class="header_block">
+        {{#ifExt router.action 'video' 'eq'}}
+        <a class="header_return" href="{{backUrl}}"></a>
+        <span class="header_title">{{lotteryName}}-开奖直播</span> {{else}}
+        <a class="header_return" href="{{url}}"></a>
+        <span class="header_title">{{title}}</span> {{/ifExt}}
+
+    </div>
+</div>

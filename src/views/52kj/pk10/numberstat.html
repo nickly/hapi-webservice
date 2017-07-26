@@ -1,0 +1,41 @@
+{{#section 'css'}}
+<!-- css内容 -->
+{{/section}}
+
+{{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/pk10/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+<section class="app_index_Scope">
+    <div class="app_public_statisticsBlock app_lhHistoryBlock">
+         {{> 52kj/pk10/template/numberstat }}
+    </div>
+ </section>
+
+<!--帮助说明弹窗-->
+{{> 52kj/partials/help }}
+
+{{#section 'js'}}
+<script type="text/javascript">
+
+    var pathArray = [
+        'public/index',
+        'lottery/pk10/numberstat'
+    ];
+
+    seajs.use(pathArray ,function (publicCallBack,indexCallBack) {
+
+        /** 添加loading */
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        })
+    })
+</script>
+{{/section}}

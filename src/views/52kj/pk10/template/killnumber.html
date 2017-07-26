@@ -1,0 +1,131 @@
+ <!--浮动表格-->
+        <div class="statistics_title">
+            <table>
+                <tr>
+                    <td><span class="titleW">期号</span></td>
+                    <td><span class="titleW">开奖号码</span></td>
+                </tr>
+                 {{#if data.items}} 
+                	{{#each data.items}}
+	                <tr>
+	                    <td><span class="titleW">{{ this.period }}</span></td>
+	                    
+	                    {{#ifExt this.number 0 'eq'}} 
+                        	<td class="red"><span class="titleW fontRed">当前期</span></td>
+                         {{else}}	 
+                            {{#ifExt this.number -1 'eq'}}
+								<td class="red"><span class="titleW fontRed">待开奖</span></td>
+							{{else}}
+								<td><span class="titleW">{{ this.number }}</span></td>
+							 {{/ifExt}}
+                         {{/ifExt}}             
+	                </tr>
+                	 {{/each}} 
+
+                	  <tr>
+		                    <td colspan="2">全对率(%)</td>
+		                </tr>
+		                <tr>
+		                    <td colspan="2">当天连中</td>
+		                </tr>
+		                <tr>
+		                    <td colspan="2">最大连中</td>
+		                </tr>
+            	{{/if}}
+               
+            </table>
+        </div>
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                <table>
+                    <tr class="titleBg">
+                        <td><span class="titleW">期号</span></td>
+                        <td><span class="titleW">开奖号码</span></td>
+                        {{#each robot}}
+                        <td><span class="range">{{ this }}</span></td>
+                        {{/each}}
+                        
+                        <td><span class="range">统计</span></td>
+                    </tr>
+               {{#if data.items}} 
+                {{#each data.items}}
+                    <tr>
+                        <td class="titleBg"><span class="titleW">{{ this.period }}</span></td>
+                       
+                        
+                         {{#ifExt this.number 0 'eq'}} 
+                        	 <td class="titleBg fontRed"><span class="titleW">当前期</span></td>
+                        
+                         {{else}}
+                          {{#ifExt this.number -1 'eq'}}
+							 <td class="titleBg fontRed"><span class="titleW">待开奖</span></td>
+							{{else}}
+							<td><span class="titleW">{{ this.number }}</span></td>
+							 {{/ifExt}}
+                          {{/ifExt}}
+                        
+                        
+                         {{#each this.robot}}
+                         		 {{#ifExt this.state -2 'eq'}} 
+		                        	<td><span class="range">{{ this.killnumber }}</span></td> 
+		                         {{else}}
+		                              {{#ifExt this.state -1 'eq'}}
+										<td class="fontGreen"><span class="range">{{ this.killnumber }}</span></td>
+									  {{else}}
+										<td  class="fontRed"><span class="range">{{ this.killnumber }}</span></td>
+									  {{/ifExt}}
+		                          {{/ifExt}}
+                          {{/each}}
+
+                       
+                         {{#ifExt this.stat 0 'eq'}} 
+                        	<td class="fontRed"><span class="range">全对</span></td>
+                         {{else}}
+							  {{#ifExt this.stat -1 'eq'}}
+							 <td class="fontRed"><span class="range"></span></td>
+							  {{else}}
+								<td><span class="range">{{ this.stat }} </span></td>
+	                          {{/ifExt}}
+                       {{/ifExt}}
+                    </tr> 
+                {{/each}} 
+                 <tr>
+                        <td class="titleBg"><span class="range"></span></td>
+                        <td class="titleBg"><span class="range"></span></td>
+                         {{#if data.stat}} 
+			                {{#each data.stat}}
+ 								<td class="fontRed"><span class="range">{{percent this.rate 2}}%</span></td>
+			                 {{/each}} 
+		            	{{else}}
+		            	{{/if}}
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="titleBg">当天连中</td>
+                         {{#if data.stat}} 
+			                {{#each data.stat}}
+ 								<td><span class="range">{{ this.current }}</span></td>
+			                 {{/each}} 
+		            	{{else}}
+		            	{{/if}}
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="titleBg">最大连中</td>
+                        {{#if data.stat}} 
+			                {{#each data.stat}}
+ 								<td><span class="range">{{ this.max }}</span></td>
+			                 {{/each}} 
+		            	{{else}}
+		            	{{/if}}
+                    </tr> 
+            {{else}}
+            <tr>
+                <td colspan="13">
+                    <p>没有获取到数据</p>
+                </td>
+            </tr>
+            {{/if}}
+                  
+                </table>
+            </div>
+        </div>

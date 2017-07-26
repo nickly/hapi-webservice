@@ -1,0 +1,50 @@
+{{#section 'header'}}
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/pk10/header }} 
+
+{{/section}}
+
+<section class="app_index_Scope">
+    <div class="app_public_statisticsBlock app_todayNumStatisticsBlock">
+        <!--浮动表格-->
+        <div class="statistics_title">
+            <table>
+                <tr class="titleBg title" rowspan="2">
+                    <td><span class="titleW titleH">号码</span></td>
+                </tr>
+                {{#each balls}}
+                    <tr class="titleBg"><td><span class="titleW"><span class="numberBg">{{sum @index 1}}</span></span></td></tr>
+                {{/each}}   
+            </table>
+        </div>
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                {{> 52kj/pk10/template/todaystat }}
+            </div>
+        </div>
+    </div>
+     {{> 52kj/partials/_todaystat }}
+</section>
+
+
+
+{{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/pk10/todaystat'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+        
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+
+    });
+
+</script>
+{{/section}}

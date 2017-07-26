@@ -1,0 +1,90 @@
+{{#section 'css'}}
+<!-- css内容 -->
+{{/section}}
+
+{{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/pk10/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+
+<div class="app_public_tableBlock">
+
+    <table>
+        <tbody><tr>
+            <th width="20%">期数</th>
+            <th width="15%">时间</th>
+            <th>冠亚和</th>
+            <th>1~5龙虎</th>
+        </tr>
+        {{#if historyList}} {{#each historyList}}
+        <tr>
+            <td>{{Period}}</td>
+            <td>{{iDateTime DrawingTime}}</td>
+            <td>
+                <span class="table_history_kaijiang  historyGuanYaHe">
+                </span>
+            </td>
+            <td>
+                <span style="display: none;" class="historyLonghu">{{NumberList}}</span>
+                <span class="table_history_kaijiang  longhu">
+                </span>
+            </td>
+        </tr>
+        {{/each}} {{else}}
+        <tr>
+            <td colspan="4">
+                <p>没有获取到数据</p>
+            </td>
+        </tr>
+        {{/if}}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<!--帮助说明弹窗-->
+<div class="app_public_helpBlock">
+    <div class="ht_bg"></div>
+    <div class="ht_windows">
+        <div class="win_title">
+            <span>帮助说明</span>
+            <i></i>
+        </div>
+        <div class="ht_content">
+            1.表格统计了不同条件下号码的出现次数及遗漏（未出现）次数；<br>
+            2.输代表截止当前未出现的总次数，赢代表截止当前连续出现的总次数；<br>
+            3.点击第一列可按对应标签的出现次数排序。<br>
+        </div>
+        <div class="ht_confirm">
+            <span class="cancel">取消</span>
+            <span>确定</span>
+        </div>
+    </div>
+</div>
+
+<div class="Switch_btn" style="position: fixed;"><a href="/pk10/history" style="width: 100%;height: 100%;display: block;"></a></div>
+
+<script type="text/javascript">
+
+    var pathArray = [
+        'public/index',
+        'lottery/pk10/longhu'
+    ];
+
+    seajs.use(pathArray ,function (publicCallBack,indexCallBack) {
+
+        /** 添加loading */
+        publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        })
+    })
+</script>

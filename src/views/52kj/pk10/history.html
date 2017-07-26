@@ -1,0 +1,127 @@
+{{#section 'css'}}
+<!-- css内容 -->
+{{/section}}
+
+{{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/pk10/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+
+<div class="app_public_tableBlock">
+    <div class="app_table_requirement public_addPositionRelative">
+        <ul>
+            <li><span data-group="1" textValue="1">1</span></li>
+            <li><span data-group="2" textValue="2">2</span></li>
+            <li><span data-group="3" textValue="3">3</span></li>
+            <li><span data-group="4" textValue="4">4</span></li>
+            <li><span data-group="5" textValue="5">5</span></li>
+            <li><span data-group="6" textValue="6">6</span></li>
+            <li><span data-group="7" textValue="7">7</span></li>
+            <li><span data-group="8" textValue="8">8</span></li>
+            <li><span data-group="9" textValue="9">9</span></li>
+            <li><span data-group="10" textValue="10">10</span></li>
+            <li><span data-group="ds" textValue="单">单</span></li>
+            <li><span data-group="ds" textValue="双">双</span></li>
+            <li><span data-group="dx" textValue="大">大</span></li>
+            <li><span data-group="dx" textValue="小">小</span></li>
+            <li><span data-group="clear" textValue="恢复">恢复</span></li>
+        </ul>
+        <div class="app_hiddenMesk"></div>
+    </div>
+    <table>
+        <tr>
+            <th>期数</th>
+            <th>时间</th>
+            <th><div class="app_table_menuBlock">
+                <span><i class="active" data-type="number">号码</i></span>
+                <span><i data-type="dx">大小</i></span>
+                <span><i data-type="ds">单双</i></span>
+                <span><i data-type="dz">对子</i></span>
+                <span class="table_req_filter"><i>筛选</i><b class="table_requirement"></b></span>
+            </div></th>
+        </tr>
+        {{#if historyList}} {{#each historyList}}
+        <tr>
+            <td>{{Period}}</td>
+            <td>{{iDateTime DrawingTime}}</td>
+            <td><div class="app_lotterySection  app_lotteryStyle1">
+                <ul>
+                    {{#each NumberList }}
+                        <li><span class="num{{this}} bg"  numberclass="num{{this}} bg"   datatype="{{this}}">{{this}}</span></li>
+                    {{/each}}
+                </ul>
+            </div></td>
+        </tr>
+        {{/each}} {{else}}
+        <tr>
+            <td colspan="3">
+                <p>没有获取到数据</p>
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+
+
+<div class="app_public_tableBlock" style="display: none;">
+    <table>
+        <tbody><tr>
+            <th width="20%">期数</th>
+            <th width="15%">时间</th>
+            <th>冠亚和</th>
+            <th>1~5龙虎</th>
+        </tr>
+        {{#if historyList}} {{#each historyList}}
+        <tr>
+            <td>{{Period}}</td>
+            <td>{{iDateTime DrawingTime}}</td>
+            <td>
+                <span class="table_history_kaijiang  historyGuanYaHe">
+                </span>
+            </td>
+            <td>
+                <span style="display: none;" class="historyLonghu">{{NumberList}}</span>
+                <span class="table_history_kaijiang  longhu">
+                </span>
+            </td>
+        </tr>
+        {{/each}} {{else}}
+        <tr>
+            <td colspan="4">
+                <p>没有获取到数据</p>
+            </td>
+        </tr>
+        {{/if}}
+        </tbody>
+    </table>
+</div>
+
+
+
+<!--帮助说明弹窗-->
+{{> 52kj/partials/help }}
+
+<div class="Switch_btn" style="position: fixed;"></div>
+
+<script type="text/javascript">
+
+    var pathArray = [
+        'public/index',
+        'lottery/pk10/history'
+    ];
+
+    seajs.use(pathArray ,function (publicCallBack,indexCallBack) {
+
+        /** 添加loading */
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        })
+    })
+</script>

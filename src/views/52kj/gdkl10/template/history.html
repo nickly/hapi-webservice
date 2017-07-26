@@ -1,0 +1,22 @@
+
+ {{#if data.history}}  
+    {{#each data.history}}
+    <tr>
+        <td>{{this.PeriodNumber}}</td>
+        <td>{{iDateTime this.DrawingTime}}</td>
+        <td>
+            <div class="app_lottery_gdklsf">
+                {{#ifExt @index 0 'gt'}} {{#each this.OpenCodeList}}
+                <i class="{{numberColor ../../data.frist this}}">{{this}}</i> {{/each}} {{else}} {{#each ../data.frist}}
+                <i class="{{this.color}}">{{this.text}}</i> {{/each}} {{/ifExt}}
+            </div>
+        </td>
+    </tr>
+    {{/each}} 
+{{else}}
+<tr>
+    <td colspan="3">
+        <p>没有获取到数据</p>
+    </td>
+</tr>
+{{/if}}

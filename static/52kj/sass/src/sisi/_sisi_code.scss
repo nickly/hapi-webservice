@@ -1,0 +1,736 @@
+@charset "utf-8";
+
+/*********************************************公用库**********************************************/
+@import "../../libs/Library";
+@import "../../libs/codeBlock";
+/*********************************************自己代码********************************************/
+
+
+
+
+/*********************************************技巧文章-start********************************************/
+.app_index_Scope{
+
+  .app_TipsArticles{
+    width: 100%;
+    padding:pxChangeRem(6) pxChangeRem(20);
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfe0e0;
+    @extend %private_Clear_Fix;
+    p{
+      line-height: pxChangeRem(50);
+      font-size: pxChangeRem(28);
+      color: #333333;
+      @extend %private_HiddenFullFont;
+    }
+    i{
+      display: block;
+      float: right;
+      font-size: pxChangeRem(20);
+      color: #999999;
+      line-height:pxChangeRem(43);
+      padding-left:pxChangeRem(27);
+      @extend %TipsArticles_i;
+    }
+    &:hover,&.active{
+      background: #f4f4f4;
+    }
+
+  }
+
+}
+/*********************************************技巧文章-end********************************************/
+
+
+/*********************************************文章详情-start********************************************/
+.app_index_Scope{
+
+  .app_articleDetails{
+    width: 100%;
+    padding:0 pxChangeRem(20);
+    box-sizing: border-box;
+    .ad_title{
+      padding:pxChangeRem(6) 0;
+      @extend %private_Clear_Fix;
+      p{
+        line-height: pxChangeRem(50);
+        font-size: pxChangeRem(32);
+        color: #333333;
+        text-align: center;
+        @extend %private_ClearWrap;
+      }
+      i{
+        display: block;
+        float: right;
+        font-size: pxChangeRem(20);
+        color: #999999;
+        line-height:pxChangeRem(43);
+        padding-left:pxChangeRem(27);
+        @extend %TipsArticles_i;
+      }
+    }
+    .ad_content{
+      @extend %private_ClearWrap;
+      padding: pxChangeRem(20) 0;
+      line-height: pxChangeRem(36);
+      font-size: pxChangeRem(24);
+      color: #333333;
+      img{
+        max-width: 100%;
+      }
+    }
+
+  }
+}
+/*********************************************文章详情-end********************************************/
+
+/*帮助说明弹窗*/
+.app_public_helpBlock{
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+  .ht_bg{
+    position: absolute;
+    //position: -webkit-sticky;
+    //position: -moz-sticky;
+    //position: -ms-sticky;
+    //position: sticky;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @extend %public_blackOpacity60;
+  }
+
+  .ht_windows{
+    position: absolute;
+    top:25%;
+    bottom:25%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: auto;
+    border-radius: pxChangeRem(6);
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow: hidden;
+    .win_title{
+      height: pxChangeRem(80);
+      line-height:pxChangeRem(80);
+      background: $orangeColor;
+      padding-left: pxChangeRem(30);
+      margin-bottom: pxChangeRem(25);
+      box-sizing: border-box;
+      border-radius: pxChangeRem(6) pxChangeRem(6) 0 0;
+
+      span{
+        display: block;
+        padding-left: pxChangeRem(38);
+        @extend %win_title_span;
+        font-size: pxChangeRem(26);
+        color: #ffffff;
+        float: left;
+      }
+      i{
+        display: block;
+        width: pxChangeRem(72);
+        height: pxChangeRem(80);
+        @extend %win_title_i;
+        float: right;
+      }
+    }
+    .ht_content{
+      height: 75%;
+      overflow-y: scroll;
+      padding:0 pxChangeRem(37);
+      box-sizing: border-box;
+      line-height: pxChangeRem(36);
+      font-size: pxChangeRem(24);
+      color:#333333;
+      -webkit-overflow-scrolling : touch;
+    }
+    .ht_confirm{
+      width: 100%;
+      text-align: center;
+      border-top:1px solid #e6e6e6;
+      background: #ffffff;
+      border-radius: 0 0 pxChangeRem(6) pxChangeRem(6);
+      @extend %private_Clear_Fix;
+      span{
+        float: left;
+        display: block;
+        width:50%;
+        font-size: pxChangeRem(26);
+        line-height: pxChangeRem(80);
+        box-sizing: border-box;
+        color: #333333;
+        &.cancel{
+          border-right:1px solid #e6e6e6;
+        }
+        &:active,&:hover{
+          background: $orangeColor;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+/*帮助说明弹窗*/
+
+/*设置弹窗*/
+.app_public_setBlock{
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none;
+  .ht_bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @extend %public_blackOpacity60;
+  }
+  .ht_windows{
+    position: absolute;
+    top:25%;
+    left: 0;
+    width:100%;
+    height: auto;
+    padding: 0 pxChangeRem(20);
+    box-sizing: border-box;
+    .set_title{
+      height: pxChangeRem(80);
+      line-height:pxChangeRem(80);
+      background: $orangeColor;
+      padding-left: pxChangeRem(30);
+      box-sizing: border-box;
+      border-radius: pxChangeRem(6) pxChangeRem(6) 0 0;
+      span{
+        display: block;
+        padding-left: pxChangeRem(44);
+        @extend %set_title_span;
+        font-size: pxChangeRem(26);
+        color: #ffffff;
+        float: left;
+      }
+      i{
+        display: block;
+        width: pxChangeRem(72);
+        height: pxChangeRem(80);
+        @extend %win_title_i;
+        float: right;
+      }
+    }
+    .ht_content{
+      background: #ffffff;
+      padding:pxChangeRem(25) pxChangeRem(37);
+      box-sizing: border-box;
+      line-height: pxChangeRem(36);
+      font-size: pxChangeRem(24);
+      color:#333333;
+      .set_font{
+        padding-bottom:pxChangeRem(26);
+        box-sizing: border-box;
+      }
+      .set_content{
+        padding-bottom:pxChangeRem(26);
+        box-sizing: border-box;
+        @extend %private_Clear_Fix;
+        span{
+          display: inline-block;
+          float: left;
+          padding-right:pxChangeRem(12);
+          box-sizing: border-box;
+          font-size: pxChangeRem(24);
+          color: #333333;
+          input{
+            width: pxChangeRem(54);
+            height: pxChangeRem(36);
+            text-align: center;
+            border: 1px solid #bfbfbf;
+            border-radius: pxChangeRem(3);
+            font-size: pxChangeRem(20);
+            color: #333333;
+          }
+          i{
+            display: block;
+            width: pxChangeRem(18);
+            height:pxChangeRem(34);
+            &.color1{
+              background-color: #ff0000;
+            }
+            &.color2{
+              background-color: #0000ff;
+            }
+            &.color3{
+              background-color: #008000;
+            }
+          }
+        }
+      }
+    }
+    .ht_confirm{
+      width: 100%;
+      text-align: center;
+      border-top:1px solid #e6e6e6;
+      background: #ffffff;
+      border-radius: 0 0 pxChangeRem(6) pxChangeRem(6);
+      @extend %private_Clear_Fix;
+      span{
+        float: left;
+        display: block;
+        width:50%;
+        font-size: pxChangeRem(26);
+        line-height: pxChangeRem(80);
+        box-sizing: border-box;
+        color: #333333;
+        &.cancel{
+          border-right:1px solid #e6e6e6;
+        }
+        &:active,&:hover{
+          background: $orangeColor;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+/*设置弹窗*/
+
+/*********************************************快乐十分 推荐计划-start********************************************/
+.app_index_Scope{
+  .app_referralProgram{
+    .rp_reference{
+      width: 100%;
+      .rp_title{
+        width: 100%;
+        padding: pxChangeRem(10) 0;
+        box-sizing: border-box;
+        line-height:pxChangeRem(40);
+        text-align: center;
+        font-size:pxChangeRem(22);
+        color: #333333;
+        background: #ebebeb;
+        border-bottom:1px  solid #d1d1d1;
+        i{
+          color: #d63414;
+          display: inline;
+        }
+      }
+      table{
+        width: 100%;
+        td{
+          height: pxChangeRem(50);
+          border-right:1px solid #d1d1d1;
+          border-bottom:1px  solid #d1d1d1;
+          font-size: pxChangeRem(24);
+          color: #333333;
+          padding-left:pxChangeRem(13);
+          box-sizing: border-box;
+          &.rp_width{
+            width: pxChangeRem(100);
+          }
+          &.rp_none{
+            border-right:0;
+            width: pxChangeRem(100);
+          }
+          &.rp_middle{
+            vertical-align: middle;
+            text-align: center;
+            width: pxChangeRem(114);
+          }
+          & i{
+            color: #d63414;
+          }
+        }
+        .rp_bgColor{
+          background: #f5f5f5;
+        }
+      }
+    }
+  }
+}
+/*********************************************快乐十分 推荐计划-end********************************************/
+
+
+/*********************************************北京赛车 龙虎历史-start********************************************/
+.app_index_Scope{
+  .app_lhHistory{
+    width: 100%;
+    @extend %private_Clear_Fix;
+    overflow: hidden;
+    .app_lhDraw{
+      position:relative;
+      .lh_contentLeft{
+        width:pxChangeRem(140);
+        position:absolute;
+        left: 0;
+        top:0;
+        table{
+          td{
+            text-align: center;
+            width:pxChangeRem(140);
+            height: pxChangeRem(60);
+            border: 1px solid #d1d1d1;
+            font-size: pxChangeRem(24);
+            color:#333333;
+            background-color: #f9f9f9;
+          }
+        }
+      }
+      .lh_contentRight{
+        width: pxChangeRem(9999);
+        padding-left: pxChangeRem(140);
+        box-sizing: border-box;
+        .lh_block{
+          width: 100%;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          table{
+            td{
+              width: pxChangeRem(110);
+              text-align: center;
+              height: pxChangeRem(60);
+              border: 1px solid #d1d1d1;
+              font-size: pxChangeRem(24);
+              color:#333333;
+            }
+          }
+          .lh-bg{
+            td{
+              background-color: #f9f9f9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*********************************************北京赛车 龙虎历史-end********************************************/
+
+
+
+/*********************************************重庆时时彩 冷热码分析-start********************************************/
+.app_index_Scope{
+
+  .app_lrmAnalyze {
+    width: 100%;
+    font-size: pxChangeRem(24);
+
+    table {
+      width: 100%;
+
+      tr td {
+        font-size: pxChangeRem(26);
+        line-height: 0;
+      }
+
+      td {
+        height: pxChangeRem(60);
+        //border-right:pxChangeRem(2) solid #e3e3e3;
+        //border-bottom:pxChangeRem(2) solid #e3e3e3;
+        border: 1px solid #d1d1d1;
+        text-align: center;
+        vertical-align: top;
+        &.none {
+          border-right: none;
+        }
+        &.middle {
+          vertical-align: middle;
+        }
+        &:first-child{
+          border-left: 0;
+        }
+        &:last-child{
+          border-right: 0;
+        }
+        .numberList {
+          width: 100%;
+          padding: pxChangeRem(9) 0;
+          box-sizing: border-box;
+          text-align: left;
+          @extend %private_Clear_Fix;
+          span {
+            display: block;
+            float: left;
+            text-align: center;
+            padding: pxChangeRem(5) pxChangeRem(2);
+            box-sizing: border-box;
+            font-size: 0;
+            i {
+              width: pxChangeRem(42);
+              height: pxChangeRem(42);
+              line-height: pxChangeRem(42);
+              //padding-top: pxChangeRem(6);
+              //padding: pxChangeRem(10) 0;
+              //box-sizing: border-box;
+              text-align: center;
+              display: block;
+              //@extend %numberList1;
+              //font-size: pxChangeRem(28);
+              color: #ffffff;
+              font-size: pxChangeRem(26);
+              &.num {
+                @extend %cqssc_redBg;
+              }
+              &.num2 {
+                @extend %cqssc_orangeBg;
+              }
+              &.num3 {
+                @extend %cqssc_blueBg;
+              }
+            }
+          }
+        }
+        .numberList2 {
+          span {
+            i {
+              font-size: 0;
+              width: pxChangeRem(38);
+              height: pxChangeRem(38);
+              border-radius: pxChangeRem(4);
+              @extend %app_colorStyle1;
+              &.Color1 {
+                background-position: 0 (pxChangeRem(-38 * 0));
+                &.bg {
+                  background-color: #ffff00;
+                }
+              }
+              &.Color2 {
+                background-position: 0 (pxChangeRem(-38 * 1));
+                &.bg {
+                  background-color: #0089ff;
+                }
+              }
+              &.Color3 {
+                background-position: 0 (pxChangeRem(-38 * 2));
+                &.bg {
+                  background-color: #4d4d4d;
+                }
+              }
+              &.Color4 {
+                background-position: 0 (pxChangeRem(-38 * 3));
+                &.bg {
+                  background-color: #ff7300;
+                }
+              }
+              &.Color5 {
+                background-position: 0 (pxChangeRem(-38 * 4));
+                &.bg {
+                  background-color: #81ffff;
+                }
+              }
+              &.Color6 {
+                background-position: 0 (pxChangeRem(-38 * 5));
+                &.bg {
+                  background-color: #5200ff;
+                }
+              }
+              &.Color7 {
+                background-position: 0 (pxChangeRem(-38 * 6));
+                &.bg {
+                  background-color: #e3e3e3;
+                }
+              }
+              &.Color8 {
+                background-position: 0 (pxChangeRem(-38 * 7));
+                &.bg {
+                  background-color: #ff0000;
+                }
+              }
+              &.Color9 {
+                background-position: 0 (pxChangeRem(-38 * 8));
+                &.bg {
+                  background-color: #760000;
+                }
+              }
+              &.Color10 {
+                background-position: 0 (pxChangeRem(-38 * 9));
+                &.bg {
+                  background-color: #28c200;
+                }
+              }
+            }
+          }
+        }
+        //.numWidth{
+        //  span{
+        //    width: 20%;
+        //  }
+        //}
+      }
+      .title {
+        td {
+          vertical-align: middle;
+          background: #ebebeb;
+          border-top: 0;
+        }
+      }
+      tbody {
+        td {
+          height: pxChangeRem(114);
+          padding: 0 pxChangeRem(6);
+          box-sizing: border-box;
+        }
+        .la_hig {
+          td {
+            background: #f5f5f5;
+          }
+        }
+      }
+    }
+  }
+}
+/*********************************************重庆时时彩 冷热码分析-end********************************************/
+
+/*切换按钮*/
+
+.Switch_btn{
+  width: pxChangeRem(70);
+  height: pxChangeRem(75);
+  @extend %Switch_btnLeft;
+  background-size: pxChangeRem(70);
+  position: absolute;
+  bottom:pxChangeRem(50);
+  right: pxChangeRem(50);
+  &:active,&.active{
+    width: pxChangeRem(70);
+    height: pxChangeRem(75);
+    @extend %Switch_btnRight;
+    background-size: pxChangeRem(70);
+  }
+}
+
+
+.noBg {
+  background: none !important;
+  font-size: 0.40625rem !important;
+  color:#999 !important;
+}
+
+.app_public_header .header_date{
+  position: relative;
+}
+
+.app_public_header .header_date .header_dateInput{
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.app_public_header .header_date .font{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #f3a401;
+  font-size: 0.28125rem;
+}
+
+.header_selectList ul li.active span a, .header_selectList ul li:active span a{
+  color: #fff !important;
+}
+
+.header_select .app_swiperSelectBlock table td.active a{
+  color: $orangeColor;
+}
+
+
+.app_public_header .header_video a{
+  color: #f3a401 !important;
+}
+
+.app_public_header .header_video:active a, .app_public_header .header_video.active a{
+  color: #ffffff !important;
+}
+
+.app_hiddenMesk{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #000;
+  opacity: 0;
+  z-index: 2;
+  display: none;
+}
+
+
+
+
+/*横屏 css*/
+@media screen and (orientation: landscape) {
+  .app_video_iframeBlock {
+    height: 100vh;
+  }
+  .pin-wrapper {
+    display: none;
+  }
+}
+
+
+
+
+/*404 页面*/
+.app_404Block{
+  width: 100%;
+.B_img{
+    width: 100%;
+    height:pxChangeRem(235);
+    @extend %app_404Block;
+    margin-top: pxChangeRem(183);
+    box-sizing: border-box;
+  }
+.B_font{
+  font-size: pxChangeRem(34);
+  color: #999999;
+  text-align: center;
+  padding-top: pxChangeRem(50);
+  box-sizing: border-box;
+}
+.B_btn{
+  padding-top: pxChangeRem(50);
+  box-sizing: border-box;
+  a{
+    text-align: center;
+    font-size: pxChangeRem(32);
+    margin: 0 auto;
+    display: block;
+    width:pxChangeRem(240);
+    height: pxChangeRem(60);
+    line-height: pxChangeRem(60);
+    @extend %app_404Btn;
+    color:#f98701;
+    &:active,&.active{
+      @extend %app_404Btn2;
+      color:#ffffff;
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

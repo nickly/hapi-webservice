@@ -1,0 +1,132 @@
+@charset "utf-8";
+/*********************************************公用库**********************************************/
+@import "../../libs/Library";
+@import "../../libs/codeBlock";
+/*********************************************自己公共**********************************************/
+
+.app_headerSection {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  left: 0rem;
+  z-index: 998;
+}
+
+.app_loadingSection{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   left: 0rem;
+   top: 0rem;
+   background-color: #fff;
+   z-index: 997;
+}
+
+.app_headerBg{
+   @extend %app_logo;
+  height: pxChangeRem(82);
+}
+
+.app_adSwiper{
+   width: 100%;
+   overflow-x: hidden;
+
+    ul{
+      @extend %private_Clear_Fix;
+      overflow: hidden;
+      width: 100%;
+
+      li{
+        width: 100%;
+        float: left;
+
+        img{
+           width: 100%;
+           display: block;
+        }
+      }
+    }
+
+}
+
+.app_footerSection{
+    width: 100%;
+    padding: pxChangeRem(30) 0;
+    background-color: #e8e8eb;
+}
+
+.app_footerSection_btns{
+     width: 100%;
+     font-size: 0rem;
+     text-align: center;
+
+  .touch,.noTouch{
+    width: pxChangeRem(190);
+    height: pxChangeRem(54);
+    border: 1px solid #b3b3b3;
+    border-radius: pxChangeRem(8);
+    text-align: center;
+    font-size: pxChangeRem(26);
+    color: #666;
+    display: inline-block;
+    margin:0 pxChangeRem(20);
+
+    span{
+      padding-left: pxChangeRem(46);
+      position: relative;
+      line-height: pxChangeRem(50);
+
+      i{
+        width: pxChangeRem(34);
+        height: pxChangeRem(32);
+        line-height: 32px;
+        position: absolute;
+        left: 0rem;
+        top: 50%;
+        margin-top: pxChangeRem(-32/2);
+        display: block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .touch{
+    span i{
+      &.pc{
+        @extend %app_footerPc;
+        background-position: 0 0;
+      }
+    }
+    &.active,&:hover,&:active{
+      border-color: $orangeColor;
+      color: #fff;
+      background-color: $orangeColor;
+      span i{
+        &.pc{
+          background-position: 0 pxChangeRem(-34 *1);
+        }
+      }
+    }
+  }
+  .noTouch{
+    span i{
+      &.phone{
+        @extend %app_footerPhone;
+        background-position: 0 pxChangeRem(-34 *2);
+      }
+    }
+  }
+}
+
+.app_footerSection_remarks{
+     font-size: pxChangeRem(24);
+     color: #999;
+     text-align: center;
+     padding: pxChangeRem(30) 0 0 0;
+
+     .remarks{
+          width: 100%;
+          display: block;
+          padding-bottom: pxChangeRem(10);
+     }
+}

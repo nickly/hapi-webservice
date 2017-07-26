@@ -1,0 +1,48 @@
+ {{#section 'header'}} {{/section}}
+
+<section class="app_index_Scope">
+    <!--视频 start-->
+    <div class="app_video_iframeBlock">
+        <iframe id="player1" frameborder="no" border="0" marginwidth="0" height="100%" marginheight="0" scrolling="no" ng-src="http://{{website.videoHostName}}/jsk3/h5shipin/" src="http://{{website.videoHostName}}/jsk3/h5shipin/"></iframe>
+    </div>
+    <!--视频 end-->
+
+    <!--温馨提示 start-->
+    <div class="app_video_tipsBlock">温馨提示：横放手机即可全屏观看，若无法全屏请解除手机系统的屏幕方向锁定再次尝试横放。<span class="tips_close"></span></div>
+    <!--温馨提示 end-->
+    <div class="app_public_tableBlock">
+        <table id="history">
+            <thead>
+                <tr>
+                    <th width="33%">期数</th>
+                    <th width="13%">时间</th>
+                    <th>开奖号码</th>
+                    <th>总和</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{> 52kj/jsk3/template/history}}
+            </tbody>
+
+        </table>
+    </div>
+</section>
+
+{{#section 'footer'}}
+
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/jsk3/video'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, indexCallBack) {
+        //publicCallBack.createLoading($('#loading'));
+        $(document).ready(function() {
+            indexCallBack.init();
+        });
+    });
+</script>
+{{/section}}

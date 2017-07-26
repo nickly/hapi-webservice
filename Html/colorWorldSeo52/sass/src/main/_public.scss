@@ -1,0 +1,531 @@
+@charset "utf-8";
+@import "../../libs/Library";
+
+$orangeColor: #f98701;
+
+html{
+  font-size:62.5%;
+}
+@include initStyle();
+
+body {
+  font-family:'PingFangSC-Light','Microsoft YaHei', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  font-size: pxChangeRem(24);
+}
+
+a{
+  color: #666666;
+  text-decoration: none;
+
+  &:hover{
+    color: $orangeColor;
+    text-decoration: none;
+  }
+  //去除点击时候得阴影
+  &:active{
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+    -ms-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+    -o-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+    tap-highlight-color:rgba(0, 0, 0, 0) !important;
+  }
+}
+//去除点击时候得阴影
+li:active{
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+  -moz-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+  -ms-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+  -o-tap-highlight-color:rgba(0, 0, 0, 0) !important;
+  tap-highlight-color:rgba(0, 0, 0, 0) !important;
+}
+
+.app_NoMoblie{
+   width: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 720px) {
+  .app_NoMoblie{
+    width: pxChangeRem(720);
+    margin: 0 auto;
+  }
+}
+
+
+
+.app_cannotScroll{
+   overflow: hidden;
+}
+
+.app_lotteryStyle{
+  ul{
+    width: 100%;
+    display: block;
+    @extend %private_Clear_Fix;
+
+    li{
+      width: 10%;
+      text-align: center;
+      float: left;
+
+      span{
+        width: pxChangeRem(46);
+        height: pxChangeRem(46);
+        display: inline-block;
+        border-radius: pxChangeRem(6);
+
+        &.num1{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 0));
+          background-color: #ffff00;
+        }
+        &.num2{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46* 1));
+          background-color: #0089ff;
+        }
+        &.num3{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 2));
+          background-color: #4d4d4d;
+        }
+        &.num4{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 3));
+          background-color: #ff7300;
+        }
+        &.num5{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 4));
+          background-color: #81ffff;
+        }
+        &.num6{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 5));
+          background-color: #5200ff;
+        }
+        &.num7{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 6));
+          background-color: #e3e3e3;
+        }
+        &.num8{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 7));
+          background-color: #ff0000;
+        }
+        &.num9{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 8));
+          background-color: #760000;
+        }
+        &.num10{
+          @extend %app_colorStyle;
+          background-position: 0  (pxChangeRem(-46 * 9));
+          background-color: #28c200;
+        }
+      }
+    }
+  }
+}
+
+.app_lotteryStyle2 {
+  ul {
+    width: 100%;
+    display: block;
+    @extend %private_Clear_Fix;
+
+    li {
+      width: 10%;
+      text-align: center;
+      float: left;
+
+      span{
+        width: pxChangeRem(50);
+        height: pxChangeRem(50);
+        border-radius: pxChangeRem(50);
+        background-color: #0e77c7;
+        line-height: pxChangeRem(50);
+        box-sizing: border-box;
+        color: #fff;
+        font-family: 'Myriad Pro','PingFangSC-Light','Microsoft YaHei', Helvetica, Arial, sans-serif;
+        font-size: pxChangeRem(34);
+      }
+    }
+  }
+}
+
+.app_lotteryStyle3{
+  ul{
+    width: 100%;
+    display: block;
+    @extend %private_Clear_Fix;
+
+    li{
+      width: 10%;
+      text-align: center;
+      float: left;
+
+      span{
+        width: pxChangeRem(48);
+        height: pxChangeRem(48);
+        display: inline-block;
+        @extend %app_colorStyle3;
+
+        &.num1{
+          background-position: 0  (pxChangeRem(-48 * 0));
+        }
+        &.num2{
+          background-position: 0  (pxChangeRem(-48 * 1));
+        }
+        &.num3{
+          background-position: 0  (pxChangeRem(-48 * 2));
+        }
+        &.num4{
+          background-position: 0  (pxChangeRem(-48 * 3));
+        }
+        &.num5{
+          background-position: 0  (pxChangeRem(-48 * 4));
+        }
+        &.num6{
+          background-position: 0  (pxChangeRem(-48 * 5));
+        }
+      }
+    }
+  }
+}
+
+.app_lotteryStyle4{
+
+  ul{
+    width: 100%;
+    display: block;
+    @extend %private_Clear_Fix;
+
+    li{
+      width: 10%;
+      text-align: center;
+      float: left;
+
+      span{
+        width: 100%;
+        height: pxChangeRem(50);
+        display: inline-block;
+
+        &.num1{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 0));
+        }
+        &.num2{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 1));
+        }
+        &.num3{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 2));
+        }
+        &.num4{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 3));
+        }
+        &.num5{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 4));
+        }
+        &.num6{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 5));
+        }
+        &.num7{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 6));
+        }
+        &.num8{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 7));
+        }
+        &.num9{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 8));
+        }
+        &.num10{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 9));
+        }
+        &.num11{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 10));
+        }
+        &.num12{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 11));
+        }
+        &.num13{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 12));
+        }
+        &.num14{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 13));
+        }
+        &.num15{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 14));
+        }
+        &.num16{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 15));
+        }
+        &.num17{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 16));
+        }
+        &.num18{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 17));
+        }
+        &.num19{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 18));
+        }
+        &.num20{
+          @extend %app_colorStyle4;
+          background-position: 0  (pxChangeRem(-50 * 19));
+        }
+      }
+    }
+  }
+}
+
+
+.header_select{
+   width: 100%;
+   height: pxChangeRem(68);
+   position: relative;
+   padding-right: pxChangeRem(65);
+   box-sizing: border-box;
+   border-bottom: pxChangeRem(2) solid #d1d1d1;
+   background-color: #fff;
+   position: relative;
+
+   .app_swiperSelectBlock{
+      width: 100%;
+      height: pxChangeRem(68);
+      overflow-x: hidden;
+      overflow-y: hidden;
+
+      table{
+         display: block;
+         height: pxChangeRem(68);
+         padding: 0rem;
+
+         td{
+            font-size: pxChangeRem(28);
+            padding-left: pxChangeRem(20);
+
+            span{
+               width: 100%;
+               display: block;
+               white-space: nowrap;
+            }
+
+           &.active{
+              span{
+                line-height: pxChangeRem(61);
+                height: pxChangeRem(61);
+                border-bottom: pxChangeRem(4) solid $orangeColor;
+                color: $orangeColor;
+                padding-top: pxChangeRem(3);
+              }
+           }
+         }
+      }
+   }
+
+   .app_swiperSelectMore{
+     width: pxChangeRem(65);
+     height: pxChangeRem(68);
+     position: absolute;
+     right: 0rem;
+     top: 0rem;
+     @extend %app_moreIco1;
+   }
+}
+
+.header_selectList{
+   position: absolute;
+   width: 100%;
+   padding: pxChangeRem(20) pxChangeRem(10);
+   padding-bottom: 0rem;
+   box-sizing: border-box;
+   background-color: #fff;
+   display: none;
+
+  ul{
+    width: 100%;
+    display: block;
+
+    li{
+      width: 33.3%;
+      height: pxChangeRem(56);
+      float: left;
+      padding: 0 pxChangeRem(10);
+      box-sizing: border-box;
+      display: block;
+      margin-bottom: pxChangeRem(20);
+
+      span{
+        width: 100%;
+        height: pxChangeRem(56);
+        border-radius: pxChangeRem(6);
+        border: pxChangeRem(2) solid #d1d1d1;
+        display: block;
+        text-align: center;
+        line-height: pxChangeRem(56);
+        color: #333;
+        font-size: pxChangeRem(26);
+        box-sizing: border-box;
+      }
+
+      &.active,&:active{
+        span{
+          color: #fff;
+          background-color: $orangeColor;
+          border-color: $orangeColor;
+        }
+
+      }
+    }
+  }
+}
+
+.app_selectBlockNav{
+   width: 100%;
+   height: pxChangeRem(65);
+   border-bottom: pxChangeRem(2) solid #d1d1d1;
+   padding-top: pxChangeRem(16);
+   box-sizing: border-box;
+   background-color: #fff;
+   position: relative;
+
+   .app_selectBlockNav_uls{
+       width: 100%;
+       display: block;
+
+     .app_selectBlockNav_lis{
+       width: 50%;
+       height: pxChangeRem(32);
+       line-height: pxChangeRem(32);
+       float: left;
+       text-align: center;
+       color: #333;
+       font-size: pxChangeRem(26);
+       position: relative;
+
+       span.active_arrow{
+         width: pxChangeRem(20);
+         height: pxChangeRem(14);
+         @extend %app_selectArrow;
+         position: absolute;
+         left: 50%;
+         bottom: pxChangeRem(-17);
+         margin-left: pxChangeRem(-10);
+         display: none;
+       }
+
+       span.content{
+         display: inline-block;
+         padding-right: pxChangeRem(30);
+         position: relative;
+
+         i{
+           width: pxChangeRem(21);
+           height: pxChangeRem(12);
+           display: inline-block;
+           @extend %app_selectIco;
+           background-size: pxChangeRem(21);
+           background-position: 0 0;
+           position: absolute;
+           right: 0rem;
+           top: 50%;
+           margin-top: pxChangeRem(-6);
+         }
+       }
+
+       &:first-child{
+         border-right: pxChangeRem(2) solid #d1d1d1;
+         box-sizing: border-box;
+       }
+     }
+
+     .app_selectBlockNav_active{
+       span.active_arrow{
+         display: block;
+       }
+     }
+   }
+}
+
+.app_selectBlockNavCons{
+   width: 100%;
+   padding: pxChangeRem(20) pxChangeRem(10);
+   padding-bottom: pxChangeRem(10);
+   box-sizing: border-box;
+   background-color: #fff;
+   position: absolute;
+   left: 0rem;
+   top: pxChangeRem(65);
+   display: none;
+
+   ul{
+      width: 100%;
+      display: block;
+
+      li{
+         width: 33.3%;
+         height: pxChangeRem(56);
+         float: left;
+         padding: 0 pxChangeRem(10);
+         box-sizing: border-box;
+         display: block;
+         margin-bottom: pxChangeRem(20);
+
+         span{
+            width: 100%;
+            height: pxChangeRem(56);
+            border-radius: pxChangeRem(6);
+            border: pxChangeRem(2) solid #d1d1d1;
+            display: block;
+            text-align: center;
+            line-height: pxChangeRem(56);
+            color: #333;
+            font-size: pxChangeRem(26);
+            box-sizing: border-box;
+         }
+
+         &.active,&:active{
+            span{
+              color: #fff;
+              background-color: $orangeColor;
+              border-color: $orangeColor;
+            }
+
+         }
+      }
+   }
+}
+
+.header_dateInput{
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   background: none;
+   border: none;
+   color: #f3a401;
+   font-size: pxChangeRem(18);
+  &:active,&.active{
+    color: #ffffff;
+  }
+}

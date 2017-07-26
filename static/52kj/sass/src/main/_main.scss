@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*************************************************************总样式 **************************************************/
+
+//=============================== public(start)==============================//
+@import "public";
+
+@import "../sisi/sisi_public";
+@import "../xiaoli/xiaoli_public";
+@import "../nickly/nickly_public";
+//=============================== public(end)==============================//
+
+//===============================images(start)==============================//
+@import "../sisi/sisi_imgPath";
+@import "../xiaoli/xiaoli_imgPath";
+@import "../nickly/nickly_imgPath";
+//===============================images(end)==============================//
+
+//=============================== styles(start) ==============================//
+@import "../sisi/sisi_code";
+@import "../xiaoli/xiaoli_code";
+@import "../nickly/nickly_code";
+//=============================== styles(end) ==============================//
+
+//=============================== animate(start) ==============================//
+@import "../sisi/sisi_animate";
+@import "../xiaoli/xiaoli_animate";
+@import "../nickly/nickly_animate";
+//=============================== styles(start) ==============================//

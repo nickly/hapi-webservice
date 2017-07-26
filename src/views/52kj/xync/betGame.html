@@ -1,0 +1,71 @@
+ {{#section 'css'}}
+<!-- css内容 -->
+{{/section}} {{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/xync/header }} {{/section}}
+<section class="app_index_Scope">
+    <div class="app_referralProgram">
+        <div class="rp_reference">
+            <div class="rp_title"> {{Model.betgame.DrawingDate}}-{{Model.betgame.Period}}期 免费参考</div>
+            <table>
+                {{#each Model.betgame.TwoSide}}
+                <tr>
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}}</td>
+                    <td class="rp_width">{{OddEven}}</td>
+                    <td class="rp_none">{{BigSmall}}</td>
+                </tr>
+                {{/each}}
+
+            </table>
+        </div>
+        {{#each Model.histroy}}
+        <div class="rp_reference">
+            <div class="rp_title">{{DrawingDate}}-{{Period}}期 开奖结果 <i>{{Result}}</i></div>
+            <table>
+                {{#each TwoSide}}
+                <tr class="rp_bgColor">
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}} {{#if ResultDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_width">{{OddEven}} {{#if OddEvenDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_none">{{BigSmall}} {{#if BigSmallDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+
+
+            </table>
+        </div>
+        {{/each}}
+
+    </div>
+</section>
+
+{{#section 'footer'}}
+
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/xync/xync_main',
+        'lottery/xync/betGame'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, mainCallBack, indexCallBack) {
+
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function() {
+            mainCallBack.init({
+                page: "betGame"
+            });
+            indexCallBack.init();
+        })
+
+    });
+</script>
+{{/section}}

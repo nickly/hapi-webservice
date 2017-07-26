@@ -1,0 +1,64 @@
+{{#section 'header'}}
+{{> 52kj/cqssc/header }}
+{{/section}}
+
+<section class="app_index_Scope">
+    <div class="app_referralProgram">
+        <div class="rp_reference">
+            <div class="rp_title"> {{result.betgame.DrawingDate}}-{{result.betgame.Period}}期 免费参考</div>
+            <table>
+                {{#each result.betgame.TwoSide}}
+                <tr>
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}}</td>
+                    <td class="rp_width">{{OddEven}}</td>
+                    <td class="rp_none">{{BigSmall}}</td>
+                </tr>
+                {{/each}}
+
+            </table>
+        </div>
+        {{#each result.histroy}}
+        <div class="rp_reference">
+            <div class="rp_title">{{DrawingDate}}-{{Period}}期 开奖结果 <i>{{Result}}</i></div>
+            <table>
+                {{#each TwoSide}}
+                <tr class="rp_bgColor">
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}} {{#if ResultDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_width">{{OddEven}} {{#if OddEvenDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_none">{{BigSmall}} {{#if BigSmallDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                </tr>
+                {{/each}}
+
+
+            </table>
+        </div>
+        {{/each}}
+
+    </div>
+</section>
+
+{{#section 'footer'}}
+
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+
+    var pathArray = [
+        'public/index',
+        'lottery/cqssc/betgame'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+       
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+    });
+
+</script>
+{{/section}}

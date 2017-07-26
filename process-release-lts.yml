@@ -1,0 +1,16 @@
+apps:
+     script: ./index.js
+     name: 'csj-seo-lts'
+     watch: false
+     env: 
+       NODE_ENV: production
+       HTTP_PORT: 8002
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 74  #广告站点ID
+       VERSION: lts     
+       LOGGER_UDP_IP:  '192.168.8.22'
+       LOGGER_UDP_PORT: true
+       LOGGER_IS_SEND: false
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  

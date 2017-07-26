@@ -1,0 +1,25 @@
+{{#each data.items}}
+
+<div class="app_luZhu_Block" data-attr="{{Name}}">
+    <div class="app_luZhu_title">
+        {{Name}} {{../data.datetext}}累计： {{#each ExtData}} {{Name}}({{Count}}) {{/each}}
+    </div>
+
+    <div class="app_luZhu_list">
+        <div class="scroller">
+        <table>
+            <tr>
+                {{#each Data}}
+                <td style="vertical-align:top;">
+                    {{#each this}} {{#ifExt this '通吃' 'eq'}}
+                    <span class="fontGreen">吃</span> {{else}} {{#ifExt this '和' 'eq'}}
+                    <span class="fontGreen">{{this}}</span> {{else}}
+                    <span class='{{#ifExt this '大' 'eq'}}fontRed{{/ifExt}}{{#ifExt this '小' 'eq'}}fontBlue{{/ifExt}}{{#ifExt this '单' 'eq'}}fontRed{{/ifExt}}{{#ifExt this '双' 'eq'}}fontBlue{{/ifExt}}'>{{this}}</span> {{/ifExt}} {{/ifExt}} {{/each}}
+                </td>
+                {{/each}}
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+{{/each}}

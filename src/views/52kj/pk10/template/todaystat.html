@@ -1,0 +1,26 @@
+ <table>
+                    <tr class="titleBg title">
+                        <td rowspan="2"><span class="titleW">号码</span></td>
+                         {{#each balls}}
+                        	<td colspan="2">{{ this }}</td>  
+                         {{/each}}    
+                    </tr>
+                    <tr class="titleBg title">
+                    	 {{#each balls}}
+                        	<td><span class="range">总开</span></td>
+                        	<td><span class="range">未开</span></td>
+                         {{/each}}    
+                    </tr>
+                    {{#each data}}
+                    <tr>
+                        <td class="titleBg"><span class="titleW"><i class="numberBg">{{Num}}</i></span></td>
+
+
+                        {{#each this}}
+                        <td><span class="range">{{TodayComingTimes}}</span></td>
+                        <td><span class="range">{{UncomingTimes}}</span></td>
+                        {{/each}}        
+
+                    </tr>
+                    {{/each}}                
+                </table>

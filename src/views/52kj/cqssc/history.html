@@ -1,0 +1,61 @@
+ 
+  {{#section 'header'}} {{> 52kj/cqssc/header }} {{/section}}
+
+<section class="app_index_Scope">
+    <div class="app_public_tableBlock">
+        <div class="app_table_requirement">
+            <ul>
+                <li><span data-group="0">0</span></li>
+                <li><span data-group="1">1</span></li>
+                <li><span data-group="2">2</span></li>
+                <li><span data-group="3">3</span></li>
+                <li><span data-group="4">4</span></li>
+                <li><span data-group="5">5</span></li>
+                <li><span data-group="6">6</span></li>
+                <li><span data-group="7">7</span></li>
+                <li><span data-group="8">8</span></li>
+                <li><span data-group="9">9</span></li>
+                <li><span data-group="ds">单</span></li>
+                <li><span data-group="ds">双</span></li>
+                <li><span data-group="dx">大</span></li>
+                <li><span data-group="dx">小</span></li>
+                <li><span data-group="clear">恢复</span></li>
+            </ul>
+            <span class="table_requirement"></span>
+        </div>
+
+        <table>
+            <tr>
+                <th width="32%">期数</th>
+                <th width="13%">时间</th>
+                <th>
+                    <div class="app_table_menuBlock2">开奖号码<span class="table_req_filter"><i>筛选</i><b class="table_requirement"></b></span></div>
+                </th>
+            </tr>
+            <tbody id='historyList'>
+            {{> 52kj/cqssc/template/history }} 
+            </tbody>
+
+
+        </table>
+    </div>
+</section>
+
+{{> 52kj/partials/help }}
+
+ {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/cqssc/history'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+        //publicCallBack.createLoading($('#loading'));
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+    });
+
+</script>
+{{/section}}

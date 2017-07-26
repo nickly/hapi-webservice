@@ -1,0 +1,32 @@
+ {{#section 'header'}} {{/section}}
+<section class="app_index_Scope">
+    <!--视频 start-->
+    <div class="app_video_iframeBlock">
+        <iframe id="player1" frameborder="no" border="0" height="100%" marginwidth="0" marginheight="0" scrolling="no" ng-src="http://{{website.videoHostName}}/gdkl10/h5shipin/" src="http://{{website.videoHostName}}/gdkl10/h5shipin/"></iframe>
+    </div>
+    <!--视频 end-->
+
+    <!--温馨提示 start-->
+    <div class="app_video_tipsBlock">温馨提示：横放手机即可全屏观看，若无法全屏请解除手机系统的屏幕方向锁定再次尝试横放。<span class="tips_close"></span></div>
+    <!--温馨提示 end-->
+    <div class="app_public_tableBlock">
+        <table id="history">
+            <thead>
+                <tr>
+                    <th width="30%">期数</th>
+                    <th width="13%">时间</th>
+                    <th>
+                        <div class="app_table_menuBlock2">开奖号码</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{> 52kj/gdkl10/template/history }}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{{#section 'js'}}
+<script type="text/javascript" src="{{cdnUrl}}/static/{{skin}}/js/lottery/gdkl10/video.js"></script>
+{{/section}}

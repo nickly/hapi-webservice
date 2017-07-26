@@ -1,0 +1,34 @@
+<div class="header_info">
+    {{#if lottery.hasdate}}
+    <span class="header_date"><input value="{{lottery.day}}"  class="header_dateInput"  readonly="true" onfocus="this.blur()" id="date" ><span class="font">{{lottery.day}}</span></span>
+    {{/if}}
+    <span class="header_text"><i awardPeriod="{{lottery.awardPeriod}}">距000期开奖：</i><b awardTime="{{lottery.awardTime}}">00:00</b></span>
+    <span class="header_video"><a href="/jsk3/video" >开奖直播</a></span> {{#if Help}}
+    <span class="header_help"></span> {{/if}}
+</div>
+
+<div class="header_select header_select_jsk3">
+    <div class="header_selectBlock">
+        <div class="app_swiperSelectBlock" id="app_swiperSelect">
+            <table>
+                <tr>
+                    <td {{#ifExt router.action 'history' 'eq'}} class="active" {{/ifExt}}>
+                        <span><a href="/jsk3/history">历史开奖</a></span>
+                    </td>
+                    <td {{#ifExt router.action 'numberstat' 'eq'}} class="active" {{/ifExt}}>
+                        <span><a href="/jsk3/numberstat">历史号码统计</a></span>
+                    </td>
+                    <td {{#ifExt router.action 'luzhutotal' 'eq'}} class="active" {{/ifExt}}>
+                        <span><a href="/jsk3/luzhutotal">总和路珠</a></span>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <!--<div class="app_swiperSelectMore" id="selectMoreButton"></div>-->
+    </div>
+    <div class="header_selectList" id="header_selectList">
+        <ul>
+        </ul>
+    </div>
+</div>

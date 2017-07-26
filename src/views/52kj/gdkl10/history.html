@@ -1,0 +1,44 @@
+{{#section 'header'}} {{> 52kj/gdkl10/header }} {{/section}}
+
+
+<section class="app_index_Scope">
+
+    <div class="app_public_tableBlock">
+
+        <div class="app_table_requirement">
+            <ul>
+                {{#each data.screen.numbers}}
+                <li><span>{{this}}</span></li>
+                {{/each}} {{#each data.screen.twoSide}}
+                <li><span class="twoside" data-code="{{@index}}">{{this}}</span></li>
+                {{/each}}
+                <li><span data-code="-1">恢复</span></li>
+            </ul>
+            <span class="table_requirement"></span>
+        </div>
+
+
+        <table id="history">
+            <thead>
+                <tr>
+                    <th width="30%">期数</th>
+                    <th width="13%">时间</th>
+                    <th>
+                        <div class="app_table_menuBlock2">开奖号码<span class="table_req_filter"><i>筛选</i><b class="table_requirement"></b></span></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{> 52kj/gdkl10/template/history }}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!--帮助说明弹窗-->
+{{> 52kj/partials/help }} 
+
+<!--js-->
+ {{#section 'js'}}
+<script type="text/javascript" src="{{cdnUrl}}/static/{{skin}}/js/lottery/gdkl10/history.js"></script>
+{{/section}}

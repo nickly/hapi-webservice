@@ -1,0 +1,42 @@
+ <div class="rp_reference">
+            <div class="rp_title"> {{data.betgame.Period}}期 推荐计划</div>
+            <table>
+                {{#each data.betgame.TwoSide}}
+                <tr {{#interlaced @index 2 "class='rp_bgColor'" ""}}{{/interlaced}}>
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}}</td>
+                    <td class="rp_width">{{OddEven}}</td>
+                    <td class="rp_none">{{BigSmall}}</td>
+                </tr>
+               
+                {{/each}}
+ 				<tr>
+                	<td class="rp_middle">冠亚和</td>
+                	<td colspan="3">{{data.betgame.LongHu}}</td>
+                </tr>
+            </table>
+        </div>
+        {{#each data.histroy}}
+        <div class="rp_reference">
+            <div class="rp_title">{{Period}}期 开奖结果 <i>{{Result}}</i></div>
+            <table>
+                {{#each TwoSide}}
+                <tr {{#interlaced @index 2 "class='rp_bgColor'" ""}}{{/interlaced}}>
+                    <td class="rp_middle">{{Ball}}</td>
+                    <td>{{ResultStr}} {{#if ResultDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_width">{{OddEven}} {{#if OddEvenDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                    <td class="rp_none">{{BigSmall}} {{#if BigSmallDisplay}}<i>(赢)</i>{{/if}}
+                    </td>
+                </tr>
+                
+                {{/each}}
+				<tr>
+                	<td class="rp_middle">冠亚和</td>
+                	<td colspan="3">{{LongHu}} {{#if LongHuDisplay}}<i>(赢)</i>{{/if}}</td>
+                </tr>
+
+            </table>
+        </div>
+        {{/each}}

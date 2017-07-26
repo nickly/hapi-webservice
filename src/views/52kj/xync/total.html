@@ -1,0 +1,37 @@
+ {{#section 'css'}}
+<!-- css内容 -->
+{{/section}} {{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/xync/header }} {{/section}}
+<section class="app_luZhu_Scope" id='app_luZhu_Scope'>
+    {{> 52kj/partials/_luzhu }}
+</section>
+
+{{> 52kj/partials/help }} {{#section 'footer'}}
+
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/xync/xync_main',
+        'lottery/xync/total'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, mainCallBack, indexCallBack) {
+
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function() {
+            mainCallBack.init({
+                page: "total",
+                tagId: ".app_luZhu_Scope",
+                dateCallback: indexCallBack.luZhuTableInit
+            });
+            indexCallBack.init();
+        })
+
+    });
+</script>
+{{/section}}

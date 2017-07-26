@@ -1,0 +1,40 @@
+{{#if data}}
+ <div class="rp_reference">
+    <div class="rp_title"> {{data.betgame.DrawingDate}}-{{data.betgame.Period}}期 免费参考</div>
+    <table>
+        {{#each data.betgame.TwoSide}}
+        <tr>
+            <td class="rp_middle">{{Ball}}</td>
+            <td>{{ResultStr}}</td>
+            <td class="rp_width">{{OddEven}}</td>
+            <td class="rp_none">{{BigSmall}}</td>
+        </tr>
+        {{/each}} 
+    </table>
+</div>
+
+{{#each data.histroy}}
+<div class="rp_reference">
+    <div class="rp_title">{{DrawingDate}}-{{Period}}期 开奖结果 <i>{{Result}}</i></div>
+    <table>
+        {{#each TwoSide}}
+        <tr class="rp_bgColor">
+            <td class="rp_middle">{{Ball}}</td>
+            <td>{{ResultStr}} {{#if ResultDisplay}}<i>(赢)</i>{{/if}}
+            </td>
+            <td class="rp_width">{{OddEven}} {{#if OddEvenDisplay}}<i>(赢)</i>{{/if}}
+            </td>
+            <td class="rp_none">{{BigSmall}} {{#if BigSmallDisplay}}<i>(赢)</i>{{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{/each}}
+{{else}}
+<div class="rp_reference">
+    <p>暂无数据</p>
+</div>
+{{/if}}
+
+

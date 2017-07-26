@@ -1,0 +1,89 @@
+{{#section 'header'}} {{> 52kj/cqssc/header }} {{/section}}
+
+
+<section class="app_index_Scope">
+    <div class="app_public_statisticsBlock">
+        <!--浮动表格-->
+        <div class="statistics_title">
+            <table>
+                <tr class="title">
+                    <td><span class="titleW">日期</span></td>
+                </tr>
+                {{#each result}}
+                <tr>
+                    <td><span class="titleW">{{iDate StatDate}}</span></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                <table>
+                    <tr class="titleBg title">
+                        <td><span class="titleW">日期</span></td>
+                        <td><span class="range">0</span></td>
+                        <td><span class="range">1</span></td>
+                        <td><span class="range">2</span></td>
+                        <td><span class="range">3</span></td>
+                        <td><span class="range">4</span></td>
+                        <td><span class="range">5</span></td>
+                        <td><span class="range">6</span></td>
+                        <td><span class="range">7</span></td>
+                        <td><span class="range">8</span></td>
+                        <td><span class="range">9</span></td>
+                        <td><span class="range">单</span></td>
+                        <td><span class="range">双</span></td>
+                        <td><span class="range">大</span></td>
+                        <td><span class="range">小</span></td>
+                        <td><span class="range">龙</span></td>
+                        <td><span class="range">虎</span></td>
+                        <td><span class="range">平</span></td>
+                    </tr>
+
+                    {{#each result}}
+                    <tr>
+                        <td class="titleBg"><span class="titleW">{{iDate StatDate}}</span></td>
+                        <td><span class="range">{{Num0}}</span></td>
+                        <td><span class="range">{{Num1}}</span></td>
+                        <td><span class="range">{{Num2}}</span></td>
+                        <td><span class="range">{{Num3}}</span></td>
+                        <td><span class="range">{{Num4}}</span></td>
+                        <td><span class="range">{{Num5}}</span></td>
+                        <td><span class="range">{{Num6}}</span></td>
+                        <td><span class="range">{{Num7}}</span></td>
+                        <td><span class="range">{{Num8}}</span></td>
+                        <td><span class="range">{{Num9}}</span></td>
+                        <td><span class="range">{{Odd}}</span></td>
+                        <td><span class="range">{{Even}}</span></td>
+                        <td><span class="range">{{Big}}</span></td>
+                        <td><span class="range">{{Small}}</span></td>
+                        <td><span class="range">{{Dragon}}</span></td>
+                        <td><span class="range">{{Tiger}}</span></td>
+                        <td><span class="range">{{Equal}}</span></td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/cqssc/numberstat'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+    
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+
+    });
+
+</script>
+{{/section}}

@@ -1,0 +1,47 @@
+ {{#section 'css'}}
+<!-- css内容 -->
+{{/section}} {{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/jsk3/header }}
+
+<!-- 更多内容 -->
+
+{{/section}}
+
+
+<section class="app_index_Scope">
+    <div class="app_public_tableBlock">
+        <table id="history">
+            <thead>
+                <tr>
+                    <th width="33%">期数</th>
+                    <th width="13%">时间</th>
+                    <th>开奖号码</th>
+                    <th>总和</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{> 52kj/jsk3/template/history}}
+            </tbody>
+
+        </table>
+    </div>
+</section>
+{{> 52kj/partials/help }} {{#section 'footer'}}
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/jsk3/history'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, indexCallBack) {
+        //publicCallBack.createLoading($('#loading'));
+        $(document).ready(function() {
+            indexCallBack.init();
+        });
+    });
+</script>
+{{/section}}

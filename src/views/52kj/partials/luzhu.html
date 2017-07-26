@@ -1,0 +1,35 @@
+ {{#section 'condition'}} {{#if lottery.condion}}
+
+<div class="app_selectBlockNav" id="app_selectBlockNav">
+    <div class="app_selectBlockNav_uls">
+        <div class="app_selectBlockNav_lis ">
+            <span class="active_arrow"></span>
+            <span class="content" data-attr="球号" data-default="{{selectText.ballText}}">{{selectText.ballText}}<i></i></span>
+        </div>
+        <div class="app_selectBlockNav_lis">
+            <span class="active_arrow"></span>
+            <span class="content" data-attr="两面" data-default="{{selectText.twoSided}}">{{selectText.twoSided}}<i></i></span>
+        </div>
+    </div>
+
+    <div class="app_selectBlockNavCons">
+        <ul data-attr="球号">
+            {{#each balls}}
+            <li><span>{{ this }}</span></li>
+            {{/each}}
+            <li class="active"><span>全部</span></li>
+        </ul>
+        <ul data-attr="两面" style="display: none;">
+            <li><span>大小</span></li>
+            <li><span>单双</span></li>
+            <li class="active"><span>全部</span></li>
+        </ul>
+    </div>
+</div>
+{{/if}} {{/section}}
+
+<section class="app_luZhu_Scope" id="data_result">
+
+    {{> 52kj/partials/_luzhu }}
+
+</section>

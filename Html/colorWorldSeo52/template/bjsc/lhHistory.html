@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<link rel="stylesheet" href="../../css/plugInStyle/loading.css">
+<link rel="stylesheet" href="../../css/plugInStyle/lCalendar.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/libs/flexible.min.js"></script>
+<script type="text/javascript" src="../../js/libs/sea.min.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/libs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+
+    var pathArray = [
+        'src/public/index',
+        'src/bjsc/lhHistory/index'
+    ];
+
+    seajs.use(pathArray ,function (publicCallBack,indexCallBack) {
+
+        /** 添加loading */
+        publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        })
+    })
+</script>
+
+
+<body class="app_NoMoblie">
+
+<section class="container">
+
+<header>
+        <div class="app_headerSection  app_public_header   pinned">
+            <div class="header_block">
+                <span class="header_return" id="header_return"></span>
+                <span class="header_name">北京赛车PK10</span>
+                <div class="header_allName">
+                    <ul>
+                        <li><a href="#">北京赛车</a></li>
+                        <li><a href="#">北京赛车</a></li>
+                        <li><a href="#">北京赛车</a></li>
+                        <li><a href="#">北京赛车</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_info">
+                <span class="header_date"><input value="03/21"  class="header_dateInput"  readonly="true"  id="date" ></span>
+                <span class="header_text"><i>距6148685期开奖：</i><b>01:30</b></span>
+                <span class="header_video">开奖直播</span>
+                <span class="header_help"></span>
+            </div>
+
+            <div class="header_select">
+                <div class="header_selectBlock">
+                    <div class="app_swiperSelectBlock"  id="app_swiperSelect">
+                        <table>
+                            <tr>
+                                <td class="active">
+                                    <span>历史开奖</span>
+                                </td>
+                                <td>
+                                    <span>单双大小路珠</span>
+                                </td>
+                                <td>
+                                    <span>今日号码统计</span>
+                                </td>
+                                <td>
+                                    <span>冷热码分析</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="app_swiperSelectMore" id="selectMoreButton"></div>
+                </div>
+                <div class="header_selectList" id="header_selectList">
+                    <ul>
+                        <li>
+                            <span>历史开奖</span>
+                        </li>
+                        <li>
+                            <span>单双大小路珠</span>
+                        </li>
+                        <li>
+                            <span>今日号码统计</span>
+                        </li>
+                        <li>
+                            <span>冷热码分析</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+<section id="loading"></section>
+
+<section class="app_index_Scope">
+    <div class="app_public_statisticsBlock app_lhHistoryBlock">
+        <!--浮动表格-->
+        <div class="statistics_title">
+            <table>
+                <tr class="title">
+                    <td><span class="titleW">日期</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+                <tr>
+                    <td><span class="titleW">2017-4-26</span></td>
+                </tr>
+            </table>
+        </div>
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                <table>
+                    <tr class="titleBg title">
+                        <td><span class="titleW">日期</span></td>
+                        <td><span class="range">冠军龍</span></td>
+                        <td><span class="range">冠军虎</span></td>
+                        <td><span class="range">亚军龍</span></td>
+                        <td><span class="range">第四名虎</span></td>
+                        <td><span class="range">第五名龍</span></td>
+                        <td><span class="range">第六名虎</span></td>
+                        <td><span class="range">第七名龍</span></td>
+                        <td><span class="range">第八名虎</span></td>
+                        <td><span class="range">第九名龍</span></td>
+                        <td><span class="range">第十名虎</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                    <tr>
+                        <td class="titleBg"><span class="titleW">2017-4-26</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">40</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">43</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                        <td><span class="range">38</span></td>
+                        <td><span class="range">41</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+     <div class="app_footerSection">
+         <div class="app_footerSection_btns">
+             <a href="" ><span><i  class="pc"></i>电脑版</span></a>
+             <a href="" ><span><i  class="phone"></i>触屏版</span></a>
+         </div>
+
+         <div class="app_footerSection_remarks">
+                 <span class="remarks">易记域名：m.pk10we.net</span>
+                 <span class="remarks">©2016  高频彩联盟  版权所有</span>
+         </div>
+     </div>
+</footer>
+
+    <!--帮助说明弹窗-->
+    <div class="app_public_helpBlock">
+        <div class="ht_bg"></div>
+        <div class="ht_windows">
+            <div class="win_title">
+                <span>帮助说明</span>
+                <i></i>
+            </div>
+            <div class="ht_content">
+                1.表格统计了不同条件下号码的出现次数及遗漏（未出现）次数；<br>
+                2.输代表截止当前未出现的总次数，赢代表截止当前连续出现的总次数；<br>
+                3.点击第一列可按对应标签的出现次数排序。<br>
+            </div>
+            <div class="ht_confirm">
+                <span class="cancel">取消</span>
+                <span>确定</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+

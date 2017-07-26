@@ -1,0 +1,16 @@
+apps:
+     script: ./index.js
+     name: 'csj-seogpc-lts'
+     watch: false
+     env: 
+       NODE_ENV: production
+       HTTP_PORT: 8001
+       CDN: ''  #CDN地址
+       AD_WEBSITE: 75  #广告站点ID-高频彩联盟
+       VERSION: lts     
+       LOGGER_UDP_IP:  '192.168.8.22'
+       LOGGER_UDP_PORT: 20001
+       LOGGER_IS_SEND: true
+     log_date_format: 'YYYY-MM-DD HH:mm Z'
+     autorestart: true
+  

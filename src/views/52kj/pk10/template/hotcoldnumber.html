@@ -1,0 +1,32 @@
+{{#each data}}
+            <tr {{#interlaced @index 2 "class='la_hig'" ""}}{{/interlaced}}>
+                <td class="middle">{{Ball}}</td>
+                <td>
+                    <div class="numberList numberList2">
+                     {{#if this.HotList}} 
+                     {{#each this.HotList}}
+                        <span><i class="Color{{this}} bg"></i></span>
+                     {{/each}} 
+                     {{/if}}
+                    </div>
+                </td>
+                <td>
+                    <div class="numberList numberList2">
+                     {{#if this.WarmList}} 
+                        {{#each this.WarmList}}
+                        <span><i class="Color{{this}} bg"></i></span>
+                     	{{/each}} 
+                     {{/if}}
+                    </div>
+                </td>
+                <td>
+                    <div class="numberList numberList2">
+                     {{#if this.ColdList}} 
+                        {{#each this.ColdList}}
+                        <span><i class="Color{{this}} bg"></i></span>
+                     	{{/each}} 
+                     {{/if}}
+                    </div>
+                </td>
+            </tr>
+             {{/each}}

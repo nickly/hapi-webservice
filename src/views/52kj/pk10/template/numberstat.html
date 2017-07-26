@@ -1,0 +1,65 @@
+<!--浮动表格-->
+        <div class="statistics_title">
+            <table>
+                <tr class="title">
+                    <td><span class="titleW">日期</span></td>
+                </tr>
+                 {{#if data.items}} 
+                {{#each data.items}}
+                    <tr>
+                       <td><span class="titleW">{{ this.date }}</span></td>
+                    </tr> 
+                {{/each}} 
+            {{else}}
+            <tr>
+                <td>
+                   <span class="titleW"></span>
+                </td>
+            </tr>
+            {{/if}}
+            </table>
+        </div>
+        <!--表格-->
+        <div class="statistics_content" id="wrapper">
+            <div class="sc_block" id="result">
+                <table>
+                    <tr class="titleBg title">
+                        <td><span class="titleW">日期</span></td>
+                        <td><span class="range">冠军龍</span></td>
+                        <td><span class="range">冠军虎</span></td>
+                        <td><span class="range">亚军龍</span></td>
+                        <td><span class="range">亚军虎</span></td>
+                         <td><span class="range">第三名龍</span></td>
+                        <td><span class="range">第三名虎</span></td>
+                        <td><span class="range">第四名龍</span></td>
+                        <td><span class="range">第四名虎</span></td>
+                        <td><span class="range">第五名龍</span></td>
+                        <td><span class="range">第五名虎</span></td>          
+                    </tr>
+                    {{#if data.items}} 
+                {{#each data.items}}
+                	
+                    <tr>
+                        <td class="titleBg"><span class="titleW">{{ this.date }}</span></td>
+                        <td><span class="range">{{ this.dragon1 }}</span></td>
+                        <td><span class="range">{{ this.tiger1 }}</span></td>
+                        <td><span class="range">{{ this.dragon2 }}</span></td>
+                        <td><span class="range">{{ this.tiger2 }}</span></td>
+                        <td><span class="range">{{ this.dragon3 }}</span></td>
+                        <td><span class="range">{{ this.tiger3 }}</span></td>
+                        <td><span class="range">{{ this.dragon4 }}</span></td>
+                        <td><span class="range">{{ this.tiger4 }}</span></td>
+                        <td><span class="range">{{ this.dragon5 }}</span></td>
+                        <td><span class="range">{{ this.tiger5 }}</span></td>
+                    </tr> 
+                {{/each}} 
+            {{else}}
+            <tr>
+                <td colspan="11">
+                    <p>没有获取到数据</p>
+                </td>
+            </tr>
+            {{/if}}
+                </table>
+            </div>
+        </div>

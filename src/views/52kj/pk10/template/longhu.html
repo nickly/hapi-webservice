@@ -1,0 +1,30 @@
+<table>
+    <tbody><tr>
+        <th width="20%">期数</th>
+        <th width="15%">时间</th>
+        <th>冠亚和</th>
+        <th>1~5龙虎</th>
+    </tr>
+    {{#if historyList}} {{#each historyList}}
+    <tr>
+        <td>{{Period}}</td>
+        <td>{{iDateTime DrawingTime}}</td>
+        <td>
+                <span class="table_history_kaijiang  historyGuanYaHe">
+                </span>
+        </td>
+        <td>
+            <span style="display: none;" class="historyLonghu">{{NumberList}}</span>
+            <span class="table_history_kaijiang  longhu">
+                </span>
+        </td>
+    </tr>
+    {{/each}} {{else}}
+    <tr>
+        <td colspan="4">
+            <p>没有获取到数据</p>
+        </td>
+    </tr>
+    {{/if}}
+    </tbody>
+</table>

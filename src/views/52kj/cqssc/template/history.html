@@ -1,0 +1,19 @@
+            {{#if historyList}} {{#each historyList}}
+            <tr>
+                <td>{{PeriodNumber}}</td>
+                <td>{{iDateTime DrawingTime}}</td>
+                <td>
+                    <div class="app_lottery_cqssc" style="width:100%;">
+                        {{#each NumberList}}
+                        <i>{{this}}</i> 
+                        {{/each}}
+                    </div>
+                </td>
+            </tr>
+            {{/each}} {{else}}
+            <tr>
+                <td colspan="3">
+                    <p>没有获取到数据</p>
+                </td>
+            </tr>
+            {{/if}}

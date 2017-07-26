@@ -1,0 +1,109 @@
+ {{#section 'css'}}
+<!-- css内容 -->
+{{/section}} {{#section 'header'}}
+
+<!-- 自定头部内容， 引入子模板 -->
+{{> 52kj/xync/header }} {{/section}}
+
+<section class="app_index_Scope">
+    <div class="app_public_tableBlock">
+        <div class="app_table_requirement">
+            <ul>
+                <li><span data-query='1'>1</span></li>
+                <li><span data-query='2'>2</span></li>
+                <li><span data-query='3'>3</span></li>
+                <li><span data-query='4'>4</span></li>
+                <li><span data-query='5'>5</span></li>
+                <li><span data-query='6'>6</span></li>
+                <li><span data-query='7'>7</span></li>
+                <li><span data-query='8'>8</span></li>
+                <li><span data-query='9'>9</span></li>
+                <li><span data-query='10'>10</span></li>
+                <li><span data-query='11'>11</span></li>
+                <li><span data-query='12'>12</span></li>
+                <li><span data-query='13'>13</span></li>
+                <li><span data-query='14'>14</span></li>
+                <li><span data-query='15'>15</span></li>
+                <li><span data-query='16'>16</span></li>
+                <li><span data-query='17'>17</span></li>
+                <li><span data-query='18'>18</span></li>
+                <li><span data-query='19'>19</span></li>
+                <li><span data-query='20'>20</span></li>
+                <li><span data-query='type' data-query-val='d'>单</span></li>
+                <li><span data-query='type' data-query-val='s'>双</span></li>
+                <li><span data-query='type' data-query-val='da'>大</span></li>
+                <li><span data-query='type' data-query-val='x'>小</span></li>
+                <li><span data-query='hf'>恢复</span></li>
+            </ul>
+            <span class="table_requirement"></span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th width="30%">期数</th>
+                    <th width="13%">时间</th>
+                    <th>
+                        <div class="app_table_menuBlock2">开奖号码<span class="table_req_filter"><i>筛选</i><b class="table_requirement"></b></span></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id='historyList'>
+                {{#if historyList}} {{#each historyList}}
+                <tr data-type='historyList'>
+                    <td>{{PeriodNumber}}</td>
+                    <td>{{iDateTime DrawingTime}}</td>
+                    <td>
+                        <div class="app_lottery_gdklsf">
+                            {{#each NumberList}}
+                            <i>{{#ifExt this 9 'le'}}0{{/ifExt}}{{this}}</i> {{/each}}
+
+                        </div>
+                    </td>
+                </tr>
+                {{/each}} {{else}}
+                <tr>
+                    <td colspan="3">
+                        <p>没有获取到数据</p>
+                    </td>
+                </tr>
+                {{/if}}
+            </tbody>
+
+        </table>
+    </div>
+</section>
+
+{{> 52kj/partials/help }} {{#section 'footer'}}
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/xync/xync_main',
+        'lottery/xync/history'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, mainCallBack, indexCallBack) {
+
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function() {
+            mainCallBack.init({
+                page: "history",
+                tagId: "#historyList",
+                dateCallback: function() {
+                    indexCallBack.historySetNumColor();
+                    indexCallBack.filterList();
+                },
+                atCallback: function(data) {
+                    indexCallBack.atInsertResult(data);
+                    indexCallBack.historySetNumColor();
+                    indexCallBack.filterList();
+                }
+            });
+            indexCallBack.init();
+        })
+
+    });
+</script>
+{{/section}}

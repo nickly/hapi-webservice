@@ -1,0 +1,57 @@
+<!--帮助说明弹窗-->
+<div class="app_public_helpBlock">
+    <div class="ht_bg"></div>
+    <div class="ht_windows">
+        <div class="win_title">
+            <span>帮助说明</span>
+            <i></i>
+        </div>
+        <div class="ht_content">
+            1.提供号码当日的开出次数及近期未开次数，使用参数设置可自定义关注遗漏范围，请根据个人需要手动设置，各参数的数值可设置范围是：2-500<br>
+        </div>
+        <!--<div class="ht_confirm">
+            <span class="cancel">取消</span>
+            <span>确定</span>
+        </div>-->
+    </div>
+</div>
+<div class="app_public_setBlock" style="display: none;">
+    <div class="ht_bg"></div>
+    <div class="ht_windows">
+        <div class="win_title set_title">
+            <span>参数设置</span>
+            <i id='tdy_x'></i>
+        </div>
+
+        <div class="ht_content" data-rang="2,500">
+            <div class="set_font">
+                1.参数范围为：2-500<br> 2.各参数的设置范围不可重叠
+                <br>
+                <span id='tipResult' style="color:red"></span>
+            </div>
+
+            {{#each colors}}
+            <div class="set_content" id="iptText">
+                <span>当数值为</span>
+                <span>
+                       <input type="number" value="{{this.min}}" onkeyup="value=value.replace(/[^\d$]/ig,'0')"/>
+                   </span>
+                <span>至</span>
+                <span>
+                       <input type="number" value="{{this.max}}" onkeyup="value=value.replace(/[^\d$]/ig,'0')"/>
+                   </span>
+                <span>时显示</span>
+                <span>
+                        <i color="{{this.color}}"  style="background-color:#{{this.color}};"></i>
+                    </span>
+                <span>色</span>
+            </div>
+            {{/each}}
+        </div>
+        <div id="configSet" class="ht_confirm ht_confirm2">
+            <span class="cancel" id="today_cancel">还原</span>
+            <span id="today_ok">确定</span>
+        </div>
+    </div>
+</div> 
+<input id="_colors" type="hidden" value="{{stringColors}}">

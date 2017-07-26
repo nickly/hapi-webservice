@@ -1,0 +1,16 @@
+
+    {{#if data}}
+    {{#each data}}
+    <div class="app_TipsArticles">
+        <a href="/article/details?id={{this.Id}}">
+            <p>{{this.Title}}</p>
+            <i>{{this.CreateTime}}</i>
+        </a>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="app_TipsArticles">
+        <p>没有数据</p>
+    </div>
+    {{/if}}
+

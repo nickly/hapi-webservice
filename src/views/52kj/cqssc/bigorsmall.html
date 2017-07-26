@@ -1,0 +1,23 @@
+{{#section 'header'}}
+{{> 52kj/cqssc/header }}
+{{/section}}
+
+{{> 52kj/partials/luzhu }}
+{{> 52kj/partials/help }}
+
+ {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/cqssc/bigorsmall'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+      
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+    });
+
+</script>
+{{/section}}

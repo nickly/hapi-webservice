@@ -1,0 +1,29 @@
+<section class="app_index_Scope" id="article_list">
+
+    {{> 52kj/article/_list }}
+
+    <div class="app_active_more">点击查看更多</div>
+
+</section>
+
+{{#section 'footer'}}
+
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+
+    var sumId={{{sumId}}};
+    var pathArray = [
+        'public/index',
+        'article/list'
+    ];
+
+    seajs.use(pathArray, function (publicCallBack, indexCallBack) {
+
+        $(document).ready(function () {
+            indexCallBack.init();
+        });
+    });
+
+</script>
+{{/section}}

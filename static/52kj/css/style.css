@@ -1,0 +1,3093 @@
+@charset "UTF-8";
+/********************************************* 主入口 ****************************************************/
+/*************************************************************总样式 **************************************************/
+html {
+  font-size: 62.5%; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-size: 12px;
+  font-weight: normal; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block; }
+
+li {
+  display: block; }
+
+i {
+  font-style: normal;
+  display: inline-block; }
+
+p {
+  margin: 0;
+  padding: 0;
+  display: block; }
+
+img {
+  border: 0px;
+  display: inline-block; }
+
+a {
+  text-decoration: none; }
+
+a, input {
+  outline: none;
+  border: none;
+  padding: 0px; }
+
+span {
+  display: inline-block; }
+
+table {
+  border-collapse: collapse;
+  border: 0px; }
+
+button {
+  outline: none;
+  border: 0px; }
+
+body {
+  font-family: 'PingFangSC-Light','Microsoft YaHei', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.375rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch; }
+
+header {
+  position: relative;
+  z-index: 999; }
+
+a {
+  color: #666666;
+  text-decoration: none; }
+  a:hover {
+    color: #f98701;
+    text-decoration: none; }
+  a:active {
+    -webkit-tap-highlight-color: transparent !important;
+    -moz-tap-highlight-color: transparent !important;
+    -ms-tap-highlight-color: transparent !important;
+    -o-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important; }
+
+li:active {
+  -webkit-tap-highlight-color: transparent !important;
+  -moz-tap-highlight-color: transparent !important;
+  -ms-tap-highlight-color: transparent !important;
+  -o-tap-highlight-color: transparent !important;
+  tap-highlight-color: transparent !important; }
+
+.app_NoMoblie {
+  width: auto;
+  position: relative; }
+
+.app_cannotScroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0rem;
+  top: 0rem; }
+
+.app_lotteryStyle ul {
+  width: 100%;
+  display: block; }
+  .app_lotteryStyle ul li {
+    width: 10%;
+    text-align: center;
+    float: left; }
+    .app_lotteryStyle ul li span {
+      width: 0.71875rem;
+      height: 0.71875rem;
+      display: inline-block;
+      border-radius: 0.09375rem; }
+      .app_lotteryStyle ul li span.num1 {
+        background-position: 0 0rem;
+        background-color: #ffff00; }
+      .app_lotteryStyle ul li span.num2 {
+        background-position: 0 -0.71875rem;
+        background-color: #0089ff; }
+      .app_lotteryStyle ul li span.num3 {
+        background-position: 0 -1.4375rem;
+        background-color: #4d4d4d; }
+      .app_lotteryStyle ul li span.num4 {
+        background-position: 0 -2.15625rem;
+        background-color: #ff7300; }
+      .app_lotteryStyle ul li span.num5 {
+        background-position: 0 -2.875rem;
+        background-color: #81ffff; }
+      .app_lotteryStyle ul li span.num6 {
+        background-position: 0 -3.59375rem;
+        background-color: #5200ff; }
+      .app_lotteryStyle ul li span.num7 {
+        background-position: 0 -4.3125rem;
+        background-color: #e3e3e3; }
+      .app_lotteryStyle ul li span.num8 {
+        background-position: 0 -5.03125rem;
+        background-color: #ff0000; }
+      .app_lotteryStyle ul li span.num9 {
+        background-position: 0 -5.75rem;
+        background-color: #760000; }
+      .app_lotteryStyle ul li span.num10 {
+        background-position: 0 -6.46875rem;
+        background-color: #28c200; }
+
+.app_lotteryStyle2 ul {
+  width: 100%;
+  display: block; }
+  .app_lotteryStyle2 ul li {
+    width: 10%;
+    text-align: center;
+    float: left; }
+    .app_lotteryStyle2 ul li span {
+      display: block;
+      width: 0.78125rem;
+      height: 0.78125rem;
+      border-radius: 0.78125rem;
+      background-color: #0e77c7;
+      line-height: 0.78125rem;
+      box-sizing: border-box;
+      color: #fff;
+      font-family: 'Myriad Pro','PingFangSC-Light','Microsoft YaHei', Helvetica, Arial, sans-serif;
+      font-size: 0.53125rem; }
+
+.app_lotteryStyle3 ul {
+  width: 100%;
+  display: block; }
+  .app_lotteryStyle3 ul li {
+    width: 10%;
+    text-align: center;
+    float: left; }
+    .app_lotteryStyle3 ul li span {
+      width: 0.75rem;
+      height: 0.75rem;
+      display: inline-block; }
+      .app_lotteryStyle3 ul li span.num1 {
+        background-position: 0% 0%; }
+      .app_lotteryStyle3 ul li span.num2 {
+        background-position: 0% 20%; }
+      .app_lotteryStyle3 ul li span.num3 {
+        background-position: 0% 40%; }
+      .app_lotteryStyle3 ul li span.num4 {
+        background-position: 0% 60%; }
+      .app_lotteryStyle3 ul li span.num5 {
+        background-position: 0% 80%; }
+      .app_lotteryStyle3 ul li span.num6 {
+        background-position: 0% 100%; }
+
+.app_lotteryStyle4 ul {
+  width: 100%;
+  display: block; }
+  .app_lotteryStyle4 ul li {
+    width: 12.4%;
+    text-align: center;
+    float: left; }
+    .app_lotteryStyle4 ul li span {
+      width: 100%;
+      height: 0.78125rem;
+      display: inline-block; }
+      .app_lotteryStyle4 ul li span.num1 {
+        background-position: 0% 0%; }
+      .app_lotteryStyle4 ul li span.num2 {
+        background-position: 0% 5.26316%; }
+      .app_lotteryStyle4 ul li span.num3 {
+        background-position: 0% 10.52632%; }
+      .app_lotteryStyle4 ul li span.num4 {
+        background-position: 0% 15.78947%; }
+      .app_lotteryStyle4 ul li span.num5 {
+        background-position: 0% 21.05263%; }
+      .app_lotteryStyle4 ul li span.num6 {
+        background-position: 0% 26.31579%; }
+      .app_lotteryStyle4 ul li span.num7 {
+        background-position: 0% 31.57895%; }
+      .app_lotteryStyle4 ul li span.num8 {
+        background-position: 0% 36.84211%; }
+      .app_lotteryStyle4 ul li span.num9 {
+        background-position: 0% 42.10526%; }
+      .app_lotteryStyle4 ul li span.num10 {
+        background-position: 0% 47.36842%; }
+      .app_lotteryStyle4 ul li span.num11 {
+        background-position: 0% 52.63158%; }
+      .app_lotteryStyle4 ul li span.num12 {
+        background-position: 0% 57.89474%; }
+      .app_lotteryStyle4 ul li span.num13 {
+        background-position: 0% 63.15789%; }
+      .app_lotteryStyle4 ul li span.num14 {
+        background-position: 0% 68.42105%; }
+      .app_lotteryStyle4 ul li span.num15 {
+        background-position: 0% 73.68421%; }
+      .app_lotteryStyle4 ul li span.num16 {
+        background-position: 0% 78.94737%; }
+      .app_lotteryStyle4 ul li span.num17 {
+        background-position: 0% 84.21053%; }
+      .app_lotteryStyle4 ul li span.num18 {
+        background-position: 0% 89.47368%; }
+      .app_lotteryStyle4 ul li span.num19 {
+        background-position: 0% 94.73684%; }
+      .app_lotteryStyle4 ul li span.num20 {
+        background-position: 0% 100%; }
+
+.header_select {
+  width: 100%;
+  height: 1.0625rem;
+  position: relative;
+  padding-right: 1.01563rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: #fff; }
+  .header_select .app_swiperSelectBlock {
+    width: 100%;
+    height: 1.0625rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative; }
+    .header_select .app_swiperSelectBlock table {
+      display: block;
+      height: 1.0625rem;
+      padding: 0rem;
+      position: relative; }
+      .header_select .app_swiperSelectBlock table td {
+        font-size: 0.4375rem;
+        padding-left: 0.3125rem; }
+        .header_select .app_swiperSelectBlock table td span {
+          width: 100%;
+          display: block;
+          white-space: nowrap;
+          line-height: 0.95313rem;
+          height: 0.95313rem;
+          padding-top: 0.04688rem; }
+          .header_select .app_swiperSelectBlock table td span a {
+            color: #333333; }
+        .header_select .app_swiperSelectBlock table td.active span {
+          border-bottom: 0.0625rem solid #f98701;
+          color: #f98701; }
+  .header_select .app_swiperSelectMore {
+    width: 1.01563rem;
+    height: 1.0625rem;
+    position: absolute;
+    right: 0rem;
+    top: 0rem; }
+  .header_select.header_select_jsk3 {
+    padding-right: 0; }
+    .header_select.header_select_jsk3 .app_swiperSelectBlock table {
+      width: 100%; }
+      .header_select.header_select_jsk3 .app_swiperSelectBlock table td {
+        font-size: 0.4375rem;
+        padding: 0 0.3125rem;
+        width: 33.3%;
+        text-align: center; }
+
+.header_selectList {
+  position: absolute;
+  width: 100%;
+  padding: 0.3125rem 0.15625rem;
+  padding-bottom: 0rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: none; }
+  .header_selectList ul {
+    width: 100%;
+    display: block; }
+    .header_selectList ul li {
+      width: 33.3%;
+      height: 0.875rem;
+      float: left;
+      padding: 0 0.15625rem;
+      box-sizing: border-box;
+      display: block;
+      margin-bottom: 0.3125rem; }
+      .header_selectList ul li span {
+        width: 100%;
+        height: 0.875rem;
+        border-radius: 0.09375rem;
+        border: 1px solid #d1d1d1;
+        display: block;
+        text-align: center;
+        line-height: 0.875rem;
+        color: #333;
+        font-size: 0.40625rem;
+        box-sizing: border-box; }
+      .header_selectList ul li.active span, .header_selectList ul li:active span {
+        color: #fff;
+        background-color: #f98701;
+        border-color: #f98701; }
+
+.app_selectBlockNav {
+  width: 100%;
+  height: 1.01563rem;
+  border-bottom: 1px solid #d1d1d1;
+  padding-top: 0.25rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: relative; }
+  .app_selectBlockNav .app_selectBlockNav_uls {
+    width: 100%;
+    display: block; }
+    .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis {
+      width: 50%;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      float: left;
+      text-align: center;
+      color: #333;
+      font-size: 0.40625rem;
+      position: relative; }
+      .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis span.active_arrow {
+        width: 0.3125rem;
+        height: 0.21875rem;
+        position: absolute;
+        left: 50%;
+        bottom: -0.26563rem;
+        margin-left: -0.15625rem;
+        display: none; }
+      .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis span.content {
+        display: inline-block;
+        padding-right: 0.46875rem;
+        position: relative; }
+        .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis span.content i {
+          width: 0.32813rem;
+          height: 0.1875rem;
+          display: inline-block;
+          background-size: 0.32813rem;
+          background-position: 0 0;
+          position: absolute;
+          right: 0rem;
+          top: 50%;
+          margin-top: -0.09375rem; }
+      .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis:first-child {
+        border-right: 1px solid #d1d1d1;
+        box-sizing: border-box; }
+    .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_active span.active_arrow {
+      display: block; }
+    .app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_active span.content i {
+      background-position: 0 -0.1875rem !important; }
+
+.app_selectBlockNavCons {
+  width: 100%;
+  padding: 0.3125rem 0.15625rem;
+  padding-bottom: 0.15625rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  position: absolute;
+  left: 0rem;
+  top: 1.01563rem;
+  display: none; }
+  .app_selectBlockNavCons ul {
+    width: 100%;
+    display: block; }
+    .app_selectBlockNavCons ul li {
+      width: 33.3%;
+      height: 0.875rem;
+      float: left;
+      padding: 0 0.15625rem;
+      box-sizing: border-box;
+      display: block;
+      margin-bottom: 0.3125rem; }
+      .app_selectBlockNavCons ul li span {
+        width: 100%;
+        height: 0.875rem;
+        border-radius: 0.09375rem;
+        border: 1px solid #d1d1d1;
+        display: block;
+        text-align: center;
+        line-height: 0.875rem;
+        color: #333;
+        font-size: 0.40625rem;
+        box-sizing: border-box; }
+      .app_selectBlockNavCons ul li.active span {
+        color: #fff;
+        background-color: #f98701;
+        border-color: #f98701; }
+
+.header_dateInput {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #f3a401;
+  font-size: 0.28125rem; }
+  .header_dateInput:active, .header_dateInput.active {
+    color: #ffffff; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己公共**********************************************/
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己公共**********************************************/
+.app_public_header .header_block {
+  position: relative;
+  background: #f98701;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  height: 1.125rem;
+  line-height: 1.125rem;
+  z-index: 999; }
+.app_public_header .header_return {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0.9375rem;
+  height: 1.125rem; }
+.app_public_header .header_name {
+  color: #ffffff;
+  padding-right: 0.5625rem;
+  font-size: 0.46875rem; }
+.app_public_header .header_title {
+  color: #ffffff;
+  font-size: 0.46875rem; }
+.app_public_header .header_allName {
+  display: none;
+  position: absolute;
+  top: 1.125rem;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 999; }
+  .app_public_header .header_allName ul {
+    float: left;
+    width: 100%;
+    padding: 0 0.1875rem 0.375rem;
+    box-sizing: border-box; }
+  .app_public_header .header_allName li {
+    float: left;
+    width: 33.3%;
+    padding: 0.3125rem 0.125rem 0;
+    box-sizing: border-box; }
+  .app_public_header .header_allName a {
+    display: block;
+    width: 2.9375rem;
+    height: 0.84375rem;
+    line-height: 0.84375rem;
+    text-align: center;
+    color: #333333;
+    font-size: 0.40625rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 0.125rem;
+    box-sizing: border-box; }
+    .app_public_header .header_allName a:active, .app_public_header .header_allName a.active {
+      color: #ffffff;
+      background: #f98701;
+      border: 1px solid #f98701; }
+.app_public_header .header_info {
+  background: #fffbe3;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0.09375rem 0.3125rem 0.125rem; }
+.app_public_header .header_date {
+  float: left;
+  display: block;
+  color: #f3a401;
+  text-align: center;
+  padding-top: 0.0625rem;
+  margin-right: 0.25rem;
+  width: 1.125rem;
+  height: 0.625rem;
+  line-height: 0.625rem;
+  font-size: 0.28125rem; }
+  .app_public_header .header_date:active, .app_public_header .header_date.active {
+    color: #ffffff; }
+.app_public_header .header_text {
+  display: block;
+  float: left;
+  color: #333333;
+  line-height: 0.6875rem; }
+  .app_public_header .header_text b {
+    display: block;
+    float: left;
+    font-weight: normal;
+    color: #ffac00;
+    font-size: 0.53125rem; }
+  .app_public_header .header_text i {
+    display: block;
+    float: left;
+    font-size: 0.375rem; }
+.app_public_header .header_video {
+  display: block;
+  color: #ffac00;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: 0.28125rem;
+  margin-top: 0.03125rem;
+  font-size: 0.34375rem;
+  padding-left: 0.40625rem;
+  padding-rigth: 0.125rem;
+  width: 2.03125rem;
+  height: 0.59375rem;
+  line-height: 0.59375rem; }
+  .app_public_header .header_video:active, .app_public_header .header_video.active {
+    color: #ffffff; }
+.app_public_header .header_help {
+  display: block;
+  float: right;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  margin-top: 0.0625rem; }
+.app_public_header .header_set {
+  display: block;
+  float: right;
+  width: 0.5625rem;
+  height: 0.5625rem;
+  margin-top: 0.0625rem;
+  margin-right: 0.375rem; }
+
+.app_public_maskLayer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 888; }
+
+.app_public_tableBlock {
+  position: relative; }
+  .app_public_tableBlock .app_table_requirement {
+    display: none;
+    background: #ffffff;
+    position: relative;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 0.15625rem;
+    padding: 0.3125rem 0.29688rem 0; }
+    .app_public_tableBlock .app_table_requirement ul {
+      float: left;
+      width: 100%; }
+    .app_public_tableBlock .app_table_requirement li {
+      float: left;
+      width: 20%;
+      box-sizing: border-box;
+      padding: 0 0.23438rem 0.3125rem; }
+      .app_public_tableBlock .app_table_requirement li span {
+        display: block;
+        color: #333333;
+        text-align: center;
+        background: #fafafa;
+        border: 1px solid #cccccc;
+        font-size: 0.46875rem;
+        width: 1.375rem;
+        height: 0.75rem;
+        line-height: 0.75rem;
+        border-radius: 0.03125rem; }
+        .app_public_tableBlock .app_table_requirement li span.fontOrange {
+          color: #ff7300; }
+        .app_public_tableBlock .app_table_requirement li span:active, .app_public_tableBlock .app_table_requirement li span.active {
+          color: #ffffff;
+          background: #f98701;
+          border: 1px solid #f98701; }
+  .app_public_tableBlock table {
+    width: 100%;
+    color: #333333;
+    text-align: center; }
+    .app_public_tableBlock table tr:nth-child(odd) td {
+      background: #f5f5f5; }
+    .app_public_tableBlock table th {
+      font-weight: normal;
+      background: #ebebeb;
+      height: 0.9375rem;
+      font-size: 0.4375rem; }
+    .app_public_tableBlock table td {
+      background: #ffffff;
+      height: 0.9375rem;
+      font-size: 0.40625rem; }
+  .app_public_tableBlock .app_table_menuBlock {
+    display: inline-block;
+    font-size: 0; }
+    .app_public_tableBlock .app_table_menuBlock i {
+      display: inline-block;
+      text-align: center;
+      color: #333333;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      font-size: 0.40625rem;
+      border-radius: 0.03125rem;
+      width: 1.03125rem;
+      height: 0.59375rem;
+      line-height: 0.59375rem; }
+      .app_public_tableBlock .app_table_menuBlock i:active, .app_public_tableBlock .app_table_menuBlock i.active {
+        color: #ffffff;
+        background: #f98701;
+        border: 1px solid #f98701; }
+    .app_public_tableBlock .app_table_menuBlock span {
+      display: inline-block;
+      font-size: 0;
+      padding: 0 0.125rem;
+      position: relative; }
+      .app_public_tableBlock .app_table_menuBlock span:active i, .app_public_tableBlock .app_table_menuBlock span.active i {
+        color: #ffffff;
+        background: #f98701;
+        border: 1px solid #f98701; }
+      .app_public_tableBlock .app_table_menuBlock span.noTouch i {
+        background: #f5f5f5;
+        color: #b2b2b2; }
+        .app_public_tableBlock .app_table_menuBlock span.noTouch i:active, .app_public_tableBlock .app_table_menuBlock span.noTouch i.active {
+          color: #b2b2b2;
+          background: #f5f5f5;
+          border: 1px solid #cccccc; }
+    .app_public_tableBlock .app_table_menuBlock .table_requirement {
+      display: none;
+      position: absolute;
+      top: -0.34375rem;
+      right: 0.4375rem;
+      width: 0.375rem;
+      height: 0.40625rem; }
+    .app_public_tableBlock .app_table_menuBlock.table_menuBlock_pk10 span {
+      padding: 0 0.25rem; }
+  .app_public_tableBlock .app_table_menuBlock2 {
+    text-align: center;
+    padding-right: 1.375rem;
+    position: relative; }
+    .app_public_tableBlock .app_table_menuBlock2 .table_req_filter {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0.3125rem;
+      text-align: center;
+      color: #333333;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      font-size: 0.40625rem;
+      border-radius: 0.03125rem;
+      width: 1.03125rem;
+      height: 0.59375rem;
+      line-height: 0.59375rem; }
+      .app_public_tableBlock .app_table_menuBlock2 .table_req_filter:active, .app_public_tableBlock .app_table_menuBlock2 .table_req_filter.active {
+        color: #ffffff;
+        background: #f98701;
+        border: 1px solid #f98701; }
+      .app_public_tableBlock .app_table_menuBlock2 .table_req_filter i {
+        display: block; }
+    .app_public_tableBlock .app_table_menuBlock2 .table_requirement {
+      display: none;
+      position: absolute;
+      top: -0.39063rem;
+      right: 0.4375rem;
+      width: 0.375rem;
+      height: 0.40625rem; }
+  .app_public_tableBlock .app_lotteryStyle1 ul {
+    width: 100%;
+    display: block; }
+  .app_public_tableBlock .app_lotteryStyle1 li {
+    width: 10%;
+    text-align: center;
+    float: left;
+    font-size: 0; }
+  .app_public_tableBlock .app_lotteryStyle1 span {
+    width: 0.59375rem;
+    height: 0.59375rem;
+    display: inline-block;
+    border-radius: 0.0625rem; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num1 {
+      background-position: 0 0rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num1.bg {
+        background-color: #ffff00; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num2 {
+      background-position: 0 -0.59375rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num2.bg {
+        background-color: #0089ff; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num3 {
+      background-position: 0 -1.1875rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num3.bg {
+        background-color: #4d4d4d; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num4 {
+      background-position: 0 -1.78125rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num4.bg {
+        background-color: #ff7300; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num5 {
+      background-position: 0 -2.375rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num5.bg {
+        background-color: #81ffff; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num6 {
+      background-position: 0 -2.96875rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num6.bg {
+        background-color: #5200ff; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num7 {
+      background-position: 0 -3.5625rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num7.bg {
+        background-color: #e3e3e3; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num8 {
+      background-position: 0 -4.15625rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num8.bg {
+        background-color: #ff0000; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num9 {
+      background-position: 0 -4.75rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num9.bg {
+        background-color: #760000; }
+    .app_public_tableBlock .app_lotteryStyle1 span.num10 {
+      background-position: 0 -5.34375rem;
+      background-size: 0.59375rem 5.9375rem; }
+      .app_public_tableBlock .app_lotteryStyle1 span.num10.bg {
+        background-color: #28c200; }
+  .app_public_tableBlock .app_lotteryStyle2 ul {
+    width: 100%;
+    display: block; }
+  .app_public_tableBlock .app_lotteryStyle2 li {
+    width: 10%;
+    text-align: center;
+    float: left;
+    font-size: 0; }
+  .app_public_tableBlock .app_lotteryStyle2 span {
+    width: 0.59375rem;
+    height: 0.59375rem;
+    display: block;
+    font-size: 0.4375rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.59375rem;
+    border-radius: 0.0625rem; }
+    .app_public_tableBlock .app_lotteryStyle2 span.blueBg {
+      background: #2850a0; }
+    .app_public_tableBlock .app_lotteryStyle2 span.orangeBg {
+      background: #ff6600; }
+  .app_public_tableBlock .app_lotteryStyle3 {
+    text-align: center;
+    font-size: 0; }
+    .app_public_tableBlock .app_lotteryStyle3 span {
+      display: inline-block;
+      font-size: 0;
+      width: 33.3%; }
+    .app_public_tableBlock .app_lotteryStyle3 i {
+      width: 0.71875rem;
+      height: 0.71875rem;
+      display: inline-block; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num1 {
+        background-position: 0% 0%; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num2 {
+        background-position: 0% 20%; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num3 {
+        background-position: 0% 40%; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num4 {
+        background-position: 0% 60%; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num5 {
+        background-position: 0% 80%; }
+      .app_public_tableBlock .app_lotteryStyle3 i.num6 {
+        background-position: 0% 100%; }
+  .app_public_tableBlock .table_history_kaijiang {
+    font-size: 0; }
+    .app_public_tableBlock .table_history_kaijiang i {
+      color: #333333;
+      display: inline-block;
+      font-size: 0.4375rem;
+      width: 0.71875rem;
+      text-align: center; }
+      .app_public_tableBlock .table_history_kaijiang i.blue {
+        color: #2850a0; }
+      .app_public_tableBlock .table_history_kaijiang i.orange {
+        color: #ff6600; }
+  .app_public_tableBlock .app_lottery_cqssc {
+    font-size: 0;
+    padding-right: 0.3125rem; }
+    .app_public_tableBlock .app_lottery_cqssc i {
+      text-align: center;
+      display: inline-block;
+      width: 19%;
+      font-size: 0.46875rem;
+      font-weight: bold;
+      height: 0.625rem;
+      line-height: 0.625rem; }
+      .app_public_tableBlock .app_lottery_cqssc i.red {
+        color: #ff0000; }
+      .app_public_tableBlock .app_lottery_cqssc i.purple {
+        color: #5200fe; }
+      .app_public_tableBlock .app_lottery_cqssc i.soil {
+        color: #760000; }
+      .app_public_tableBlock .app_lottery_cqssc i.blue {
+        color: #2d92c2; }
+      .app_public_tableBlock .app_lottery_cqssc i.green {
+        color: #008000; }
+      .app_public_tableBlock .app_lottery_cqssc i.gray {
+        color: #6f8a97; }
+  .app_public_tableBlock .app_lottery_gdklsf {
+    font-size: 0; }
+    .app_public_tableBlock .app_lottery_gdklsf i {
+      text-align: center;
+      display: inline-block;
+      width: 12.5%;
+      height: 0.625rem;
+      line-height: 0.625rem;
+      font-size: 0.4375rem;
+      font-weight: bold; }
+      .app_public_tableBlock .app_lottery_gdklsf i.red {
+        color: #ff0000; }
+      .app_public_tableBlock .app_lottery_gdklsf i.purple {
+        color: #5200fe; }
+      .app_public_tableBlock .app_lottery_gdklsf i.soil {
+        color: #760000; }
+      .app_public_tableBlock .app_lottery_gdklsf i.blue {
+        color: #2d92c2; }
+      .app_public_tableBlock .app_lottery_gdklsf i.green {
+        color: #008000; }
+      .app_public_tableBlock .app_lottery_gdklsf i.orange {
+        color: #dd6c20; }
+      .app_public_tableBlock .app_lottery_gdklsf i.brown {
+        color: #b16a48; }
+      .app_public_tableBlock .app_lottery_gdklsf i.darkPurple {
+        color: #4a1b8e; }
+      .app_public_tableBlock .app_lottery_gdklsf i.gray {
+        color: #6f8a97; }
+  .app_public_tableBlock .app_lottery_jsk3 {
+    font-size: 0;
+    padding-right: 0.15625rem; }
+    .app_public_tableBlock .app_lottery_jsk3 i {
+      text-align: center;
+      display: inline-block;
+      width: 49%;
+      color: #333;
+      font-size: 0.40625rem; }
+      .app_public_tableBlock .app_lottery_jsk3 i.red {
+        color: #ed1c24; }
+
+.app_public_statisticsBlock {
+  position: relative;
+  width: 100%; }
+  .app_public_statisticsBlock table .titleBg {
+    background-color: #f9f9f9; }
+  .app_public_statisticsBlock table td {
+    color: #333333;
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    height: 0.78125rem;
+    font-size: 0.375rem; }
+    .app_public_statisticsBlock table td .titleW {
+      width: 2.1875rem; }
+    .app_public_statisticsBlock table td .range {
+      width: 0.90625rem; }
+    .app_public_statisticsBlock table td:first-child {
+      border-left: 0; }
+    .app_public_statisticsBlock table td:last-child {
+      border-left: 0; }
+  .app_public_statisticsBlock table tr.title td {
+    border-top: 0; }
+  .app_public_statisticsBlock .statistics_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99; }
+    .app_public_statisticsBlock .statistics_title table td {
+      background-color: #f9f9f9; }
+  .app_public_statisticsBlock .statistics_content {
+    width: 100%;
+    position: relative; }
+    .app_public_statisticsBlock .statistics_content .sc_block {
+      width: auto;
+      overflow: hidden; }
+  .app_public_statisticsBlock.app_lhHistoryBlock table td .titleW {
+    width: 2.1875rem; }
+  .app_public_statisticsBlock.app_lhHistoryBlock table td .range {
+    width: 1.71875rem; }
+  .app_public_statisticsBlock.app_todayNumStatisticsBlock table td {
+    height: 0.9375rem; }
+    .app_public_statisticsBlock.app_todayNumStatisticsBlock table td .titleW {
+      width: 1.34375rem; }
+    .app_public_statisticsBlock.app_todayNumStatisticsBlock table td .range {
+      width: 1.25rem; }
+    .app_public_statisticsBlock.app_todayNumStatisticsBlock table td span.range {
+      width: 1.25rem; }
+    .app_public_statisticsBlock.app_todayNumStatisticsBlock table td.fontRed {
+      color: #ed1c24; }
+    .app_public_statisticsBlock.app_todayNumStatisticsBlock table td.fontBlue {
+      color: #1c26ed; }
+  .app_public_statisticsBlock.app_todayNumStatisticsBlock table tr.title td {
+    height: 0.6875rem; }
+  .app_public_statisticsBlock.app_todayNumStatisticsBlock .numberBg {
+    text-align: center;
+    display: inline-block;
+    width: 0.5625rem;
+    height: 0.5625rem;
+    font-size: 0.4375rem;
+    line-height: 0.5625rem; }
+  .app_public_statisticsBlock.app_todayNumStatisticsBlock .statistics_title table tr.title td {
+    height: auto; }
+  .app_public_statisticsBlock.app_todayNumStatisticsBlock .statistics_title .titleH {
+    height: 1.39063rem;
+    line-height: 1.39063rem; }
+  .app_public_statisticsBlock.app_shddBlock table td .titleW {
+    width: 1.875rem; }
+  .app_public_statisticsBlock.app_shddBlock table td .range {
+    width: 1.71875rem; }
+  .app_public_statisticsBlock.app_shddBlock .fontRed {
+    color: #e90009; }
+  .app_public_statisticsBlock.app_shddBlock .fontGreen {
+    color: #06a406; }
+
+.app_shaHaoDingDan_text {
+  color: #f98701;
+  font-size: 0.375rem;
+  padding: 0 0.46875rem;
+  line-height: 0.9375rem; }
+
+.app_video_iframeBlock {
+  width: 100%; }
+  .app_video_iframeBlock * {
+    width: 100%; }
+
+.app_video_tipsBlock {
+  color: #666666;
+  background: #ffffff;
+  line-height: 0.46875rem;
+  font-size: 0.34375rem;
+  padding: 0.07813rem 0.78125rem 0.07813rem 0.3125rem;
+  position: relative; }
+  .app_video_tipsBlock .tips_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0.6875rem;
+    height: 0.6875rem; }
+
+.app_public_promptWindow {
+  display: none;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 10%;
+  text-align: center;
+  z-index: 888; }
+  .app_public_promptWindow span {
+    color: #ffffff;
+    text-align: center;
+    padding: 0.46875rem;
+    line-height: 0.46875rem;
+    font-size: 0.375rem;
+    width: 60%;
+    max-width: 90%;
+    min-width: 4.6875rem;
+    border-radius: 0.15625rem;
+    display: inline-block; }
+
+.pin-wrapper {
+  position: relative; }
+
+.app_active_more {
+  background-color: #f9f9f9;
+  font-size: 0.375rem;
+  text-align: center;
+  line-height: 0.9375rem; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己公共**********************************************/
+.app_headerSection {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  left: 0rem;
+  z-index: 998; }
+
+.app_loadingSection {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  background-color: #fff;
+  z-index: 997; }
+
+.app_headerBg {
+  height: 1.28125rem; }
+
+.app_adSwiper {
+  width: 100%;
+  overflow-x: hidden; }
+  .app_adSwiper ul {
+    overflow: hidden;
+    width: 100%; }
+    .app_adSwiper ul li {
+      width: 100%;
+      float: left; }
+      .app_adSwiper ul li img {
+        width: 100%;
+        display: block; }
+
+.app_footerSection {
+  width: 100%;
+  padding: 0.46875rem 0;
+  background-color: #e8e8eb; }
+
+.app_footerSection_btns {
+  width: 100%;
+  font-size: 0rem;
+  text-align: center; }
+  .app_footerSection_btns .touch, .app_footerSection_btns .noTouch {
+    width: 2.96875rem;
+    height: 0.84375rem;
+    border: 1px solid #b3b3b3;
+    border-radius: 0.125rem;
+    text-align: center;
+    font-size: 0.40625rem;
+    color: #666;
+    display: inline-block;
+    margin: 0 0.3125rem; }
+    .app_footerSection_btns .touch span, .app_footerSection_btns .noTouch span {
+      padding-left: 0.71875rem;
+      position: relative;
+      line-height: 0.78125rem; }
+      .app_footerSection_btns .touch span i, .app_footerSection_btns .noTouch span i {
+        width: 0.53125rem;
+        height: 0.5rem;
+        line-height: 32px;
+        position: absolute;
+        left: 0rem;
+        top: 50%;
+        margin-top: -0.25rem;
+        display: block;
+        vertical-align: middle; }
+  .app_footerSection_btns .touch span i.pc {
+    background-position: 0 0; }
+  .app_footerSection_btns .touch.active, .app_footerSection_btns .touch:hover, .app_footerSection_btns .touch:active {
+    border-color: #f98701;
+    color: #fff;
+    background-color: #f98701; }
+    .app_footerSection_btns .touch.active span i.pc, .app_footerSection_btns .touch:hover span i.pc, .app_footerSection_btns .touch:active span i.pc {
+      background-position: 0 -0.53125rem; }
+  .app_footerSection_btns .noTouch span i.phone {
+    background-position: 0 -1.0625rem; }
+
+.app_footerSection_remarks {
+  font-size: 0.375rem;
+  color: #999;
+  text-align: center;
+  padding: 0.46875rem 0 0 0; }
+  .app_footerSection_remarks .remarks {
+    width: 100%;
+    display: block;
+    padding-bottom: 0.15625rem; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己图片路径**********************************************/
+.app_index_Scope .app_TipsArticles i, .app_index_Scope .app_articleDetails .ad_title i {
+  background: url("../images/public/developer_s/TipsArticles_iconTime.png") no-repeat left center;
+  background-size: 0.3125rem; }
+
+.app_public_helpBlock .ht_windows .win_title span {
+  background: url("../images/public/developer_s/helpText_icon.png") no-repeat left center;
+  background-size: 0.4375rem; }
+
+.app_public_helpBlock .ht_windows .win_title i, .app_public_setBlock .ht_windows .set_title i {
+  background: url("../images/public/developer_s/helpText_close.png") no-repeat center;
+  background-size: 0.375rem; }
+
+.app_public_setBlock .ht_windows .set_title span {
+  background: url("../images/public/developer_s/set_icon.png") no-repeat left center;
+  background-size: 0.54688rem; }
+
+.app_index_Scope .app_lrmAnalyze table td .numberList span i.num {
+  background: url("../images/public/developer_s/cqssc_redBg.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.app_index_Scope .app_lrmAnalyze table td .numberList span i.num2 {
+  background: url("../images/public/developer_s/cqssc_orangeBg.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.app_index_Scope .app_lrmAnalyze table td .numberList span i.num3 {
+  background: url("../images/public/developer_s/cqssc_blueBg.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.Switch_btn {
+  background: url("../images/public/developer_s/Switch_btnleft.png") no-repeat;
+  background-size: 1.09375rem; }
+
+.Switch_btn:active, .Switch_btn.active {
+  background: url("../images/public/developer_s/Switch_btnright.png") no-repeat;
+  background-size: 1.09375rem; }
+
+.app_404Block .B_img {
+  background: url("../images/public/developer_s/404_bg.png") no-repeat;
+  background-size: 10rem; }
+
+.app_404Block .B_btn a {
+  background: url("../images/public/developer_s/404_btn.png") no-repeat;
+  background-size: 3.75rem; }
+
+.app_404Block .B_btn a:active, .app_404Block .B_btn a.active {
+  background: url("../images/public/developer_s/404_btn2.png") no-repeat;
+  background-size: 3.75rem; }
+
+/*********************************************公用库*****************************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己图片路径**********************************************/
+.app_public_header .header_return {
+  background: url("../images/public/developer_l/header_return.png") no-repeat center;
+  background-size: 0.3125rem; }
+
+.app_public_header .header_name {
+  background: url("../images/public/developer_l/header_arrowBottm.png") no-repeat right center;
+  background-size: 0.40625rem; }
+
+.app_public_header .header_name.active {
+  background: url("../images/public/developer_l/header_arrowTop.png") no-repeat right center;
+  background-size: 0.40625rem; }
+
+.app_public_header .header_date {
+  background: url("../images/public/developer_l/header_dateBg.png") no-repeat;
+  background-size: 1.125rem; }
+
+.app_public_header .header_date:active, .app_public_header .header_date.active {
+  background: url("../images/public/developer_l/header_dateBg2.png") no-repeat;
+  background-size: 1.125rem; }
+
+.app_public_header .header_video {
+  background: url("../images/public/developer_l/header_videoBg.png") no-repeat;
+  background-size: 2.03125rem; }
+
+.app_public_header .header_video:active, .app_public_header .header_video.active {
+  background: url("../images/public/developer_l/header_videoBg2.png") no-repeat;
+  background-size: 2.03125rem; }
+
+.app_public_header .header_help {
+  background: url("../images/public/developer_l/header_help.png") no-repeat;
+  background-size: 0.5625rem; }
+
+.app_public_header .header_help:active, .app_public_header .header_help.active {
+  background: url("../images/public/developer_l/header_help2.png") no-repeat;
+  background-size: 0.5625rem; }
+
+.app_public_header .header_set {
+  background: url("../images/public/developer_l/header_set.png") no-repeat;
+  background-size: 0.5625rem; }
+
+.app_public_tableBlock .app_lotteryStyle1 span, .app_index_Scope .app_lrmAnalyze table td .numberList2 span i {
+  background: url("../images/public/developer_l/app_colorStyle1.png") no-repeat;
+  background-size: 0.59375rem 5.9375rem; }
+
+.app_public_tableBlock .app_table_menuBlock .table_requirement, .app_public_tableBlock .app_table_menuBlock2 .table_requirement {
+  background: url("../images/public/developer_l/table_requirementBg.png") no-repeat;
+  background-size: 0.4375rem; }
+
+.app_public_tableBlock .app_lotteryStyle3 i {
+  background: url("../images/public/developer_l/app_colorStyle_k3.png") no-repeat;
+  background-size: 0.71875rem 4.3125rem; }
+
+.app_public_statisticsBlock.app_todayNumStatisticsBlock .numberBg {
+  background: url("../images/public/developer_l/table_numberBg.png") no-repeat;
+  background-size: 0.5625rem; }
+
+.app_video_tipsBlock .tips_close {
+  background: url("../images/public/developer_l/video_tips_close.png") no-repeat center;
+  background-size: 0.25rem; }
+
+.app_public_maskLayer, .app_public_promptWindow span, .app_public_helpBlock .ht_bg, .app_public_setBlock .ht_bg {
+  background: url("../images/public/developer_l/public_blackOpacity60.png"); }
+
+.app_public_tableBlock .app_lottery_cqssc i.active, .app_public_tableBlock .app_lottery_gdklsf i.active {
+  background: url("../images/public/developer_l/gdklsf_numberBg.png") no-repeat center;
+  background-size: 0.625rem; }
+
+/*********************************************公用库*****************************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己图片路径**********************************************/
+.app_headerBg {
+  background: url("../images/public/developer_n/app_logo.png") no-repeat center #f98701;
+  background-size: 3rem; }
+
+.app_lotteryStyle ul li span.num1, .app_lotteryStyle ul li span.num2, .app_lotteryStyle ul li span.num3, .app_lotteryStyle ul li span.num4, .app_lotteryStyle ul li span.num5, .app_lotteryStyle ul li span.num6, .app_lotteryStyle ul li span.num7, .app_lotteryStyle ul li span.num8, .app_lotteryStyle ul li span.num9, .app_lotteryStyle ul li span.num10 {
+  background-image: url("../images/public/developer_n/app_colorStyle1.png");
+  background-repeat: no-repeat;
+  background-size: 0.71875rem 7.1875rem; }
+
+.app_lotteryStyle3 ul li span {
+  background-image: url("../images/public/developer_n/app_colorStyle3.png");
+  background-repeat: no-repeat;
+  background-size: 0.78125rem 4.8125rem; }
+
+.app_lotteryStyle4 ul li span.num1, .app_lotteryStyle4 ul li span.num2, .app_lotteryStyle4 ul li span.num3, .app_lotteryStyle4 ul li span.num4, .app_lotteryStyle4 ul li span.num5, .app_lotteryStyle4 ul li span.num6, .app_lotteryStyle4 ul li span.num7, .app_lotteryStyle4 ul li span.num8, .app_lotteryStyle4 ul li span.num9, .app_lotteryStyle4 ul li span.num10, .app_lotteryStyle4 ul li span.num11, .app_lotteryStyle4 ul li span.num12, .app_lotteryStyle4 ul li span.num13, .app_lotteryStyle4 ul li span.num14, .app_lotteryStyle4 ul li span.num15, .app_lotteryStyle4 ul li span.num16, .app_lotteryStyle4 ul li span.num17, .app_lotteryStyle4 ul li span.num18, .app_lotteryStyle4 ul li span.num19, .app_lotteryStyle4 ul li span.num20 {
+  background-image: url("../images/public/developer_n/app_colorStyle4.png");
+  background-repeat: no-repeat;
+  background-size: 0.96875rem 16.8125rem; }
+
+.app_footerSection_btns .touch span i.pc {
+  background-image: url("../images/public/developer_n/app_footer.png");
+  background-size: 0.53125rem;
+  background-repeat: no-repeat; }
+
+.app_footerSection_btns .noTouch span i.phone {
+  background-image: url("../images/public/developer_n/app_footer.png");
+  background-size: 0.53125rem;
+  background-repeat: no-repeat; }
+
+.header_select .app_swiperSelectMore {
+  background: url("../images/public/developer_n/app_moreIco1.png") no-repeat center;
+  background-size: 0.34375rem; }
+
+.app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis span.content i {
+  background: url("../images/public/developer_n/app_selectIco.png") no-repeat 0 0;
+  background-size: 0.32813rem; }
+
+.app_selectBlockNav .app_selectBlockNav_uls .app_selectBlockNav_lis span.active_arrow {
+  background: url("../images/public/developer_n/app_selectArrow.png") no-repeat 0 0;
+  background-size: 0.3125rem; }
+
+.app_luZhu_Scope .app_luZhu_tips span i.lamp {
+  background: url("../images/public/developer_n/app_lamp.png") no-repeat 0 0;
+  background-size: 0.40625rem; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己代码********************************************/
+/*********************************************技巧文章-start********************************************/
+.app_index_Scope .app_TipsArticles {
+  width: 100%;
+  padding: 0.09375rem 0.3125rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dfe0e0; }
+  .app_index_Scope .app_TipsArticles p {
+    line-height: 0.78125rem;
+    font-size: 0.4375rem;
+    color: #333333; }
+  .app_index_Scope .app_TipsArticles i {
+    display: block;
+    float: right;
+    font-size: 0.3125rem;
+    color: #999999;
+    line-height: 0.67188rem;
+    padding-left: 0.42188rem; }
+  .app_index_Scope .app_TipsArticles:hover, .app_index_Scope .app_TipsArticles.active {
+    background: #f4f4f4; }
+
+/*********************************************技巧文章-end********************************************/
+/*********************************************文章详情-start********************************************/
+.app_index_Scope .app_articleDetails {
+  width: 100%;
+  padding: 0 0.3125rem;
+  box-sizing: border-box; }
+  .app_index_Scope .app_articleDetails .ad_title {
+    padding: 0.09375rem 0; }
+    .app_index_Scope .app_articleDetails .ad_title p {
+      line-height: 0.78125rem;
+      font-size: 0.5rem;
+      color: #333333;
+      text-align: center; }
+    .app_index_Scope .app_articleDetails .ad_title i {
+      display: block;
+      float: right;
+      font-size: 0.3125rem;
+      color: #999999;
+      line-height: 0.67188rem;
+      padding-left: 0.42188rem; }
+  .app_index_Scope .app_articleDetails .ad_content {
+    padding: 0.3125rem 0;
+    line-height: 0.5625rem;
+    font-size: 0.375rem;
+    color: #333333; }
+    .app_index_Scope .app_articleDetails .ad_content img {
+      max-width: 100%; }
+
+/*********************************************文章详情-end********************************************/
+/*帮助说明弹窗*/
+.app_public_helpBlock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none; }
+  .app_public_helpBlock .ht_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .app_public_helpBlock .ht_windows {
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: auto;
+    border-radius: 0.09375rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    overflow: hidden; }
+    .app_public_helpBlock .ht_windows .win_title {
+      height: 1.25rem;
+      line-height: 1.25rem;
+      background: #f98701;
+      padding-left: 0.46875rem;
+      margin-bottom: 0.39063rem;
+      box-sizing: border-box;
+      border-radius: 0.09375rem 0.09375rem 0 0; }
+      .app_public_helpBlock .ht_windows .win_title span {
+        display: block;
+        padding-left: 0.59375rem;
+        font-size: 0.40625rem;
+        color: #ffffff;
+        float: left; }
+      .app_public_helpBlock .ht_windows .win_title i {
+        display: block;
+        width: 1.125rem;
+        height: 1.25rem;
+        float: right; }
+    .app_public_helpBlock .ht_windows .ht_content {
+      height: 75%;
+      overflow-y: scroll;
+      padding: 0 0.57813rem;
+      box-sizing: border-box;
+      line-height: 0.5625rem;
+      font-size: 0.375rem;
+      color: #333333;
+      -webkit-overflow-scrolling: touch; }
+    .app_public_helpBlock .ht_windows .ht_confirm {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #e6e6e6;
+      background: #ffffff;
+      border-radius: 0 0 0.09375rem 0.09375rem; }
+      .app_public_helpBlock .ht_windows .ht_confirm span {
+        float: left;
+        display: block;
+        width: 50%;
+        font-size: 0.40625rem;
+        line-height: 1.25rem;
+        box-sizing: border-box;
+        color: #333333; }
+        .app_public_helpBlock .ht_windows .ht_confirm span.cancel {
+          border-right: 1px solid #e6e6e6; }
+        .app_public_helpBlock .ht_windows .ht_confirm span:active, .app_public_helpBlock .ht_windows .ht_confirm span:hover {
+          background: #f98701;
+          color: #ffffff; }
+
+/*帮助说明弹窗*/
+/*设置弹窗*/
+.app_public_setBlock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: none; }
+  .app_public_setBlock .ht_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .app_public_setBlock .ht_windows {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 0.3125rem;
+    box-sizing: border-box; }
+    .app_public_setBlock .ht_windows .set_title {
+      height: 1.25rem;
+      line-height: 1.25rem;
+      background: #f98701;
+      padding-left: 0.46875rem;
+      box-sizing: border-box;
+      border-radius: 0.09375rem 0.09375rem 0 0; }
+      .app_public_setBlock .ht_windows .set_title span {
+        display: block;
+        padding-left: 0.6875rem;
+        font-size: 0.40625rem;
+        color: #ffffff;
+        float: left; }
+      .app_public_setBlock .ht_windows .set_title i {
+        display: block;
+        width: 1.125rem;
+        height: 1.25rem;
+        float: right; }
+    .app_public_setBlock .ht_windows .ht_content {
+      background: #ffffff;
+      padding: 0.39063rem 0.57813rem;
+      box-sizing: border-box;
+      line-height: 0.5625rem;
+      font-size: 0.375rem;
+      color: #333333; }
+      .app_public_setBlock .ht_windows .ht_content .set_font {
+        padding-bottom: 0.40625rem;
+        box-sizing: border-box; }
+      .app_public_setBlock .ht_windows .ht_content .set_content {
+        padding-bottom: 0.40625rem;
+        box-sizing: border-box; }
+        .app_public_setBlock .ht_windows .ht_content .set_content span {
+          display: inline-block;
+          float: left;
+          padding-right: 0.1875rem;
+          box-sizing: border-box;
+          font-size: 0.375rem;
+          color: #333333; }
+          .app_public_setBlock .ht_windows .ht_content .set_content span input {
+            width: 0.84375rem;
+            height: 0.5625rem;
+            text-align: center;
+            border: 1px solid #bfbfbf;
+            border-radius: 0.04688rem;
+            font-size: 0.3125rem;
+            color: #333333; }
+          .app_public_setBlock .ht_windows .ht_content .set_content span i {
+            display: block;
+            width: 0.28125rem;
+            height: 0.53125rem; }
+            .app_public_setBlock .ht_windows .ht_content .set_content span i.color1 {
+              background-color: #ff0000; }
+            .app_public_setBlock .ht_windows .ht_content .set_content span i.color2 {
+              background-color: #0000ff; }
+            .app_public_setBlock .ht_windows .ht_content .set_content span i.color3 {
+              background-color: #008000; }
+    .app_public_setBlock .ht_windows .ht_confirm {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #e6e6e6;
+      background: #ffffff;
+      border-radius: 0 0 0.09375rem 0.09375rem; }
+      .app_public_setBlock .ht_windows .ht_confirm span {
+        float: left;
+        display: block;
+        width: 50%;
+        font-size: 0.40625rem;
+        line-height: 1.25rem;
+        box-sizing: border-box;
+        color: #333333; }
+        .app_public_setBlock .ht_windows .ht_confirm span.cancel {
+          border-right: 1px solid #e6e6e6; }
+        .app_public_setBlock .ht_windows .ht_confirm span:active, .app_public_setBlock .ht_windows .ht_confirm span:hover {
+          background: #f98701;
+          color: #ffffff; }
+
+/*设置弹窗*/
+/*********************************************快乐十分 推荐计划-start********************************************/
+.app_index_Scope .app_referralProgram .rp_reference {
+  width: 100%; }
+  .app_index_Scope .app_referralProgram .rp_reference .rp_title {
+    width: 100%;
+    padding: 0.15625rem 0;
+    box-sizing: border-box;
+    line-height: 0.625rem;
+    text-align: center;
+    font-size: 0.34375rem;
+    color: #333333;
+    background: #ebebeb;
+    border-bottom: 1px  solid #d1d1d1; }
+    .app_index_Scope .app_referralProgram .rp_reference .rp_title i {
+      color: #d63414;
+      display: inline; }
+  .app_index_Scope .app_referralProgram .rp_reference table {
+    width: 100%; }
+    .app_index_Scope .app_referralProgram .rp_reference table td {
+      height: 0.78125rem;
+      border-right: 1px solid #d1d1d1;
+      border-bottom: 1px  solid #d1d1d1;
+      font-size: 0.375rem;
+      color: #333333;
+      padding-left: 0.20313rem;
+      box-sizing: border-box; }
+      .app_index_Scope .app_referralProgram .rp_reference table td.rp_width {
+        width: 1.5625rem; }
+      .app_index_Scope .app_referralProgram .rp_reference table td.rp_none {
+        border-right: 0;
+        width: 1.5625rem; }
+      .app_index_Scope .app_referralProgram .rp_reference table td.rp_middle {
+        vertical-align: middle;
+        text-align: center;
+        width: 1.78125rem; }
+      .app_index_Scope .app_referralProgram .rp_reference table td i {
+        color: #d63414; }
+    .app_index_Scope .app_referralProgram .rp_reference table .rp_bgColor {
+      background: #f5f5f5; }
+
+/*********************************************快乐十分 推荐计划-end********************************************/
+/*********************************************北京赛车 龙虎历史-start********************************************/
+.app_index_Scope .app_lhHistory {
+  width: 100%;
+  overflow: hidden; }
+  .app_index_Scope .app_lhHistory .app_lhDraw {
+    position: relative; }
+    .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentLeft {
+      width: 2.1875rem;
+      position: absolute;
+      left: 0;
+      top: 0; }
+      .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentLeft table td {
+        text-align: center;
+        width: 2.1875rem;
+        height: 0.9375rem;
+        border: 1px solid #d1d1d1;
+        font-size: 0.375rem;
+        color: #333333;
+        background-color: #f9f9f9; }
+    .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentRight {
+      width: 156.23438rem;
+      padding-left: 2.1875rem;
+      box-sizing: border-box; }
+      .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentRight .lh_block {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden; }
+        .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentRight .lh_block table td {
+          width: 1.71875rem;
+          text-align: center;
+          height: 0.9375rem;
+          border: 1px solid #d1d1d1;
+          font-size: 0.375rem;
+          color: #333333; }
+        .app_index_Scope .app_lhHistory .app_lhDraw .lh_contentRight .lh_block .lh-bg td {
+          background-color: #f9f9f9; }
+
+/*********************************************北京赛车 龙虎历史-end********************************************/
+/*********************************************重庆时时彩 冷热码分析-start********************************************/
+.app_index_Scope .app_lrmAnalyze {
+  width: 100%;
+  font-size: 0.375rem; }
+  .app_index_Scope .app_lrmAnalyze table {
+    width: 100%; }
+    .app_index_Scope .app_lrmAnalyze table tr td {
+      font-size: 0.40625rem;
+      line-height: 0; }
+    .app_index_Scope .app_lrmAnalyze table td {
+      height: 0.9375rem;
+      border: 1px solid #d1d1d1;
+      text-align: center;
+      vertical-align: top; }
+      .app_index_Scope .app_lrmAnalyze table td.none {
+        border-right: none; }
+      .app_index_Scope .app_lrmAnalyze table td.middle {
+        vertical-align: middle; }
+      .app_index_Scope .app_lrmAnalyze table td:first-child {
+        border-left: 0; }
+      .app_index_Scope .app_lrmAnalyze table td:last-child {
+        border-right: 0; }
+      .app_index_Scope .app_lrmAnalyze table td .numberList {
+        width: 100%;
+        padding: 0.14063rem 0;
+        box-sizing: border-box;
+        text-align: left; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList span {
+          display: block;
+          float: left;
+          text-align: center;
+          padding: 0.07813rem 0.03125rem;
+          box-sizing: border-box;
+          font-size: 0; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList span i {
+            width: 0.65625rem;
+            height: 0.65625rem;
+            line-height: 0.65625rem;
+            text-align: center;
+            display: block;
+            color: #ffffff;
+            font-size: 0.40625rem; }
+      .app_index_Scope .app_lrmAnalyze table td .numberList2 span i {
+        font-size: 0;
+        width: 0.59375rem;
+        height: 0.59375rem;
+        border-radius: 0.0625rem; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color1 {
+          background-position: 0 0rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color1.bg {
+            background-color: #ffff00; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color2 {
+          background-position: 0 -0.59375rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color2.bg {
+            background-color: #0089ff; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color3 {
+          background-position: 0 -1.1875rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color3.bg {
+            background-color: #4d4d4d; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color4 {
+          background-position: 0 -1.78125rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color4.bg {
+            background-color: #ff7300; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color5 {
+          background-position: 0 -2.375rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color5.bg {
+            background-color: #81ffff; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color6 {
+          background-position: 0 -2.96875rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color6.bg {
+            background-color: #5200ff; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color7 {
+          background-position: 0 -3.5625rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color7.bg {
+            background-color: #e3e3e3; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color8 {
+          background-position: 0 -4.15625rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color8.bg {
+            background-color: #ff0000; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color9 {
+          background-position: 0 -4.75rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color9.bg {
+            background-color: #760000; }
+        .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color10 {
+          background-position: 0 -5.34375rem; }
+          .app_index_Scope .app_lrmAnalyze table td .numberList2 span i.Color10.bg {
+            background-color: #28c200; }
+    .app_index_Scope .app_lrmAnalyze table .title td {
+      vertical-align: middle;
+      background: #ebebeb;
+      border-top: 0; }
+    .app_index_Scope .app_lrmAnalyze table tbody td {
+      height: 1.78125rem;
+      padding: 0 0.09375rem;
+      box-sizing: border-box; }
+    .app_index_Scope .app_lrmAnalyze table tbody .la_hig td {
+      background: #f5f5f5; }
+
+/*********************************************重庆时时彩 冷热码分析-end********************************************/
+/*切换按钮*/
+.Switch_btn {
+  width: 1.09375rem;
+  height: 1.17188rem;
+  background-size: 1.09375rem;
+  position: absolute;
+  bottom: 0.78125rem;
+  right: 0.78125rem; }
+  .Switch_btn:active, .Switch_btn.active {
+    width: 1.09375rem;
+    height: 1.17188rem;
+    background-size: 1.09375rem; }
+
+.noBg {
+  background: none !important;
+  font-size: 0.40625rem !important;
+  color: #999 !important; }
+
+.app_public_header .header_date {
+  position: relative; }
+
+.app_public_header .header_date .header_dateInput {
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+
+.app_public_header .header_date .font {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #f3a401;
+  font-size: 0.28125rem; }
+
+.header_selectList ul li.active span a, .header_selectList ul li:active span a {
+  color: #fff !important; }
+
+.header_select .app_swiperSelectBlock table td.active a {
+  color: #f98701; }
+
+.app_public_header .header_video a {
+  color: #f3a401 !important; }
+
+.app_public_header .header_video:active a, .app_public_header .header_video.active a {
+  color: #ffffff !important; }
+
+.app_hiddenMesk {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #000;
+  opacity: 0;
+  z-index: 2;
+  display: none; }
+
+/*横屏 css*/
+@media screen and (orientation: landscape) {
+  .app_video_iframeBlock {
+    height: 100vh; }
+
+  .pin-wrapper {
+    display: none; } }
+/*404 页面*/
+.app_404Block {
+  width: 100%; }
+  .app_404Block .B_img {
+    width: 100%;
+    height: 3.67188rem;
+    margin-top: 2.85938rem;
+    box-sizing: border-box; }
+  .app_404Block .B_font {
+    font-size: 0.53125rem;
+    color: #999999;
+    text-align: center;
+    padding-top: 0.78125rem;
+    box-sizing: border-box; }
+  .app_404Block .B_btn {
+    padding-top: 0.78125rem;
+    box-sizing: border-box; }
+    .app_404Block .B_btn a {
+      text-align: center;
+      font-size: 0.5rem;
+      margin: 0 auto;
+      display: block;
+      width: 3.75rem;
+      height: 0.9375rem;
+      line-height: 0.9375rem;
+      color: #f98701; }
+      .app_404Block .B_btn a:active, .app_404Block .B_btn a.active {
+        color: #ffffff; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己代码********************************************/
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己代码********************************************/
+.app_index_Scope {
+  /************************ 首页作用域 ************************/ }
+  .app_index_Scope .app_adSection {
+    width: 100%;
+    height: auto; }
+  .app_index_Scope .app_contentSection {
+    width: 100%;
+    padding: 0.25rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.0625rem;
+    box-sizing: border-box;
+    background-color: #e8e8eb; }
+  .app_index_Scope .app_colorLis {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 0.15625rem;
+    margin-bottom: 0.25rem;
+    padding: 0.3125rem 0;
+    box-sizing: border-box; }
+  .app_index_Scope .app_colorLis_title {
+    width: 100%;
+    position: relative;
+    padding: 0 0.28125rem;
+    box-sizing: border-box; }
+    .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft {
+      width: 100%;
+      height: 0.70313rem;
+      padding-right: 2.89063rem;
+      box-sizing: border-box;
+      line-height: 0.70313rem; }
+    .app_index_Scope .app_colorLis_title .app_lotteryName {
+      float: left;
+      max-width: 3.125rem;
+      font-size: 0.46875rem;
+      color: #333; }
+    .app_index_Scope .app_colorLis_title .app_periodsNumber {
+      float: left;
+      font-size: 0.34375rem;
+      color: #666;
+      margin-left: 0.15625rem; }
+      .app_index_Scope .app_colorLis_title .app_periodsNumber i {
+        white-space: nowrap; }
+    .app_index_Scope .app_colorLis_title .nextLotteryTime {
+      width: 3.21875rem;
+      height: 0.70313rem;
+      position: absolute;
+      right: 0.28125rem;
+      top: 0.03125rem;
+      font-size: 0.34375rem;
+      text-align: right;
+      line-height: 0.70313rem;
+      color: #666;
+      white-space: nowrap; }
+      .app_index_Scope .app_colorLis_title .nextLotteryTime i {
+        margin-left: 0.15625rem;
+        color: #ed1c24;
+        font-weight: bold; }
+  .app_index_Scope .app_lotterySection {
+    width: 100%;
+    padding: 0.15625rem 0.125rem;
+    box-sizing: border-box; }
+  .app_index_Scope .app_colorLis_select {
+    width: 100%;
+    padding: 0 0.28125rem;
+    padding-top: 0.125rem;
+    box-sizing: border-box; }
+    .app_index_Scope .app_colorLis_select li {
+      width: 25%;
+      height: 0.85938rem;
+      float: left;
+      padding-right: 0.10938rem;
+      padding-left: 0.10938rem;
+      box-sizing: border-box; }
+      .app_index_Scope .app_colorLis_select li:nth-child(4n+1) {
+        padding-right: 0.10938rem;
+        padding-left: 0rem; }
+      .app_index_Scope .app_colorLis_select li:nth-child(4n) {
+        padding-right: 0rem;
+        padding-left: 0.10938rem; }
+      .app_index_Scope .app_colorLis_select li a {
+        width: 100%;
+        height: 0.625rem;
+        border: 1px solid #cbcbcb;
+        color: #333;
+        font-size: 0.40625rem;
+        text-align: center;
+        line-height: 0.625rem;
+        display: block;
+        border-radius: 0.09375rem;
+        cursor: pointer; }
+        .app_index_Scope .app_colorLis_select li a:hover, .app_index_Scope .app_colorLis_select li a.active, .app_index_Scope .app_colorLis_select li a:active {
+          background-color: #f98701;
+          color: #fff;
+          border-color: #f98701; }
+  .app_index_Scope .app_billboard {
+    width: 100%;
+    font-size: 0rem;
+    padding-left: 0.3125rem;
+    padding-bottom: 0.09375rem;
+    box-sizing: border-box; }
+    .app_index_Scope .app_billboard span {
+      color: #666;
+      font-size: 0.375rem;
+      display: inline-block;
+      margin-right: 0.39063rem; }
+  .app_index_Scope .app_colorLis_ad {
+    width: 100%;
+    position: relative;
+    padding: 0 0.28125rem;
+    padding-left: 1.5625rem;
+    padding-top: 0.125rem;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 0.40625rem; }
+    .app_index_Scope .app_colorLis_ad .tips {
+      width: 0.9375rem;
+      height: 0.46875rem;
+      border: 1px solid #ed1c24;
+      color: #ed1c24;
+      font-size: 0.34375rem;
+      border-radius: 0.0625rem;
+      text-align: center;
+      line-height: 0.46875rem;
+      position: absolute;
+      left: 0.28125rem;
+      top: 0.15625rem; }
+    .app_index_Scope .app_colorLis_ad .fontContent {
+      width: 100%;
+      height: 0.53125rem;
+      line-height: 0.53125rem; }
+  .app_index_Scope .app_skill {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.15625rem;
+    padding: 0 0.3125rem;
+    box-sizing: border-box; }
+    .app_index_Scope .app_skill .app_skill_title {
+      width: 100%;
+      line-height: 1.09375rem;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 0.5rem; }
+    .app_index_Scope .app_skill .app_skill_Content {
+      width: 100%; }
+      .app_index_Scope .app_skill .app_skill_Content ul {
+        width: 100%;
+        display: block;
+        padding: 0.15625rem 0;
+        padding-bottom: 0.3125rem; }
+        .app_index_Scope .app_skill .app_skill_Content ul li {
+          width: 100%;
+          display: block;
+          height: 0.78125rem;
+          line-height: 0.78125rem; }
+          .app_index_Scope .app_skill .app_skill_Content ul li a:first-child {
+            color: #f98701;
+            text-decoration: none;
+            font-size: 0.40625rem;
+            margin-right: 0.15625rem; }
+          .app_index_Scope .app_skill .app_skill_Content ul li a:last-child {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.40625rem; }
+
+.app_luZhu_Scope {
+  /************************ 路珠作用域 ************************/ }
+  .app_luZhu_Scope .app_luZhu_Block {
+    width: 100%; }
+    .app_luZhu_Scope .app_luZhu_Block .app_luZhu_title {
+      width: 100%;
+      height: 0.98438rem;
+      line-height: 0.98438rem;
+      font-size: 0.40625rem;
+      text-align: center; }
+    .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list {
+      width: 100%;
+      border-top: 1px solid #d1d1d1;
+      border-bottom: 1px solid #d1d1d1;
+      overflow-x: hidden;
+      overflow-y: hidden; }
+      .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table {
+        display: block;
+        transform: translateZ(0); }
+        .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td {
+          color: #1c26ed;
+          padding: 0.09375rem 0; }
+          .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td span {
+            width: 0.73438rem;
+            height: 0.59375rem;
+            line-height: 0.59375rem;
+            text-align: center;
+            display: block;
+            font-size: 0.375rem; }
+            .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td span.fontGreen {
+              color: green; }
+            .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td span.fontRed {
+              color: #ed1c24; }
+            .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td span.fontBlue {
+              color: #1c26ed; }
+          .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table td:nth-child(odd) {
+            background-color: #f1f1f1;
+            color: #ed1c24; }
+  .app_luZhu_Scope .app_luZhu_tips {
+    width: 100%;
+    padding: 0.125rem 0.23438rem;
+    box-sizing: border-box;
+    background-color: #fffbe3;
+    color: #333;
+    font-size: 0.28125rem;
+    border-bottom: 1px solid #d1d1d1; }
+    .app_luZhu_Scope .app_luZhu_tips span {
+      display: block;
+      padding-left: 0.46875rem;
+      position: relative; }
+      .app_luZhu_Scope .app_luZhu_tips span i.lamp {
+        width: 0.40625rem;
+        height: 0.39063rem;
+        display: block;
+        position: absolute;
+        left: 0rem;
+        top: 0rem; }
+
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己动画**********************************************/
+/**
+    例子:  声明动画：@include setAnimate("whiteChangeRed",(background-color: #fff),(background-color: #e7423d));
+              调用动画： getAnimate("whiteChangeRed",0.1, ease-in)
+ */
+/*********************************************公用库**********************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/*********************************************自己动画**********************************************/
+/**
+    例子:  声明动画：@include setAnimate("whiteChangeRed",(background-color: #fff),(background-color: #e7423d));
+              调用动画： getAnimate("whiteChangeRed",0.1, ease-in)
+ */
+/*********************************************公用库*************************************************/
+.app_index_Scope .app_TipsArticles p, .app_index_Scope .app_colorLis_title .app_colorLis_titleLeft, .app_index_Scope .app_colorLis_title .app_lotteryName, .app_index_Scope .app_colorLis_ad .fontContent, .app_index_Scope .app_skill .app_skill_Content ul li {
+  white-space: nowrap;
+  /*是禁止换行；*/
+  overflow: hidden;
+  /*多出的内容隐藏；*/
+  text-overflow: ellipsis;
+  /*多出的内容以省略号...来表达；主要用于IE等浏览器*/
+  -o-text-overflow: ellipsis;
+  /*支持chrome；*/ }
+
+.app_index_Scope .app_articleDetails .ad_title p, .app_index_Scope .app_articleDetails .ad_content {
+  word-break: break-all;
+  /*只对英文起作用，以字母作为换行依据；支持IE，chrome，FF不支持*/
+  word-wrap: break-word;
+  /*只对英文起作用，以单词作为换行依据；支持IE，chrome，FF*/
+  white-space: pre-wrap;
+  /*只对中文起作用，强制换行；*/ }
+
+\534E\6587\7EC6\9ED1
+.app_lotteryStyle ul, .app_lotteryStyle \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle2 ul, .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle3 ul, .app_lotteryStyle3 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_lotteryStyle4 ul, .app_lotteryStyle4 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_header .header_block, .app_public_header \534E\6587\7EC6\9ED1
+.header_block, \534E\6587\7EC6\9ED1
+.app_public_header .header_allName, .app_public_header \534E\6587\7EC6\9ED1
+.header_allName, \534E\6587\7EC6\9ED1
+.app_public_header .header_info, .app_public_header \534E\6587\7EC6\9ED1
+.header_info, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_table_requirement, .app_public_tableBlock \534E\6587\7EC6\9ED1
+.app_table_requirement, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle1 ul, .app_public_tableBlock .app_lotteryStyle1 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_public_tableBlock .app_lotteryStyle2 ul, .app_public_tableBlock .app_lotteryStyle2 \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_adSwiper ul, .app_adSwiper \534E\6587\7EC6\9ED1
+ul, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_TipsArticles, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_TipsArticles, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_articleDetails .ad_title, .app_index_Scope .app_articleDetails \534E\6587\7EC6\9ED1
+.ad_title, \534E\6587\7EC6\9ED1
+.app_public_helpBlock .ht_windows .ht_confirm, .app_public_helpBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_content .set_content, .app_public_setBlock .ht_windows .ht_content \534E\6587\7EC6\9ED1
+.set_content, \534E\6587\7EC6\9ED1
+.app_public_setBlock .ht_windows .ht_confirm, .app_public_setBlock .ht_windows \534E\6587\7EC6\9ED1
+.ht_confirm, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lhHistory, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_lhHistory, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_lrmAnalyze table td .numberList, .app_index_Scope .app_lrmAnalyze table td \534E\6587\7EC6\9ED1
+.numberList, \534E\6587\7EC6\9ED1
+.app_index_Scope .app_colorLis_select, .app_index_Scope \534E\6587\7EC6\9ED1
+.app_colorLis_select, \534E\6587\7EC6\9ED1
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list \534E\6587\7EC6\9ED1
+table {
+  height: 1%;
+  display: block; }
+
+.app_lotteryStyle ul:after, .app_lotteryStyle2 ul:after, .app_lotteryStyle3 ul:after, .app_lotteryStyle4 ul:after, .app_public_header .header_block:after, .app_public_header .header_allName:after, .app_public_header .header_info:after, .app_public_tableBlock .app_table_requirement:after, .app_public_tableBlock .app_lotteryStyle1 ul:after, .app_public_tableBlock .app_lotteryStyle2 ul:after, .app_adSwiper ul:after, .app_index_Scope .app_TipsArticles:after, .app_index_Scope .app_articleDetails .ad_title:after, .app_public_helpBlock .ht_windows .ht_confirm:after, .app_public_setBlock .ht_windows .ht_content .set_content:after, .app_public_setBlock .ht_windows .ht_confirm:after, .app_index_Scope .app_lhHistory:after, .app_index_Scope .app_lrmAnalyze table td .numberList:after, .app_index_Scope .app_colorLis_select:after, .app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.public_AddFloatLeft {
+  float: left; }
+
+.public_addPositionRelative {
+  position: relative; }
+
+.public_AddFloatRight {
+  float: right; }
+
+.public_Clear_Fix {
+  height: 1%;
+  display: block; }
+
+.public_Clear_Fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.scroller {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+.app_luZhu_Scope .app_luZhu_Block .app_luZhu_list table{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+/*********************************************自己动画**********************************************/
+/**
+    例子:  声明动画：@include setAnimate("whiteChangeRed",(background-color: #fff),(background-color: #e7423d));
+              调用动画： getAnimate("whiteChangeRed",0.1, ease-in)
+ */

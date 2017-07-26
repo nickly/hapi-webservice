@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"> {{#ifExt router.action 'video' 'noeq'}}
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no ">{{else}}
+    <meta name="viewport" content=" user-scalable=no "> {{/ifExt}}
+
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="no" name="wap-font-scale">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="apple-mobile-app-status-bar-style" content="#f98701" />
+    <title>{{seo.title}}</title>
+    <meta name="keywords" content="{{seo.keywords}}" />
+    <meta name="description" content="{{seo.description}}" />
+    <link rel="apple-touch-icon" href="{{cdnUrl}}/static/{{skin}}/icon/57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{cdnUrl}}/static/{{skin}}/icon/72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{cdnUrl}}/static/{{skin}}/icon/114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{cdnUrl}}/static/{{skin}}/icon/144.png" />
+    <!--<link href="//gw.alicdn.com/tps/i2/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png" rel="apple-touch-icon-precomposed">
+	<link href="//gw.alicdn.com/tps/i2/TB1nmqyFFXXXXcQbFXXE5jB3XXX-114-114.png" rel="Shortcut Icon" type="image/x-icon">-->
+    <!--<link rel="shortcut icon" href="http://csj.1396c.com/favicon.ico" />-->
+
+    <link rel="stylesheet" href="{{cdnUrl}}/static/{{skin}}/css/plugInStyle/loading.css">
+    <link rel="stylesheet" href="{{cdnUrl}}/static/{{skin}}/css/plugInStyle/lCalendar.css">
+    <link rel="stylesheet" href="{{cdnUrl}}/static/{{skin}}/css/style.css"> {{#ifExt router.action 'video' 'noeq'}}
+    <script type="text/javascript" src="{{cdnUrl}}/static/lib/flexible.min.js"></script>
+    {{else}}
+    <script type="text/javascript">
+        document.getElementsByTagName('html')[0].style.fontSize = "600%";
+        document.getElementsByTagName('html')[0].style.width = "980px";
+        document.getElementsByTagName('html')[0].style.overflowX = "hidden";
+    </script>
+    {{/ifExt}}
+
+    <script type="text/javascript" src="{{cdnUrl}}/static/lib//sea.min.js"></script>
+    <script type="text/javascript" src="{{cdnUrl}}/static/{{skin}}/js/config.js"></script>
+    <script type="text/javascript" src="{{cdnUrl}}/static/lib/jquery-1.8.3.min.js"></script>
+    <!--<script type="text/javascript" src="{{cdnUrl}}/static/lib/handlebars.runtime-v4.0.5.js"></script>-->
+    {{#if layout.css}} {{> (iPartials type='css') }} {{/if}}{{{_sections.css}}}
+</head>
+
+{{#ifExt router.action 'video' 'eq'}}
+
+<body class="app_NoMoblie" style="width:980px;overflow-x: hidden;">
+    {{else}}
+
+    <body class="app_NoMoblie">
+        {{/ifExt}}
+
+        <section class="container">
+
+            <header>
+                {{#if layout.header}} {{> (iPartials type='header') }} {{else}}
+                <div class="app_headerSection  app_public_header   pinned">
+                    <div class="header_block">
+                        <a href="{{backUrl}}"><span class="header_return" id="header_return"></span></a>
+                        <span class="header_name">
+					{{lotteryName}}
+					</span>
+                        <div class="header_allName">
+                            <ul id="navLottery" data-lotterycode="{{router.controller}}">
+                                {{#each _lotterys}}
+                                <li><a href="{{this.url}}" data-attr="{{this.code}}">{{this.text}}</a>
+                                </li>
+                                {{/each}}
+
+                            </ul>
+                        </div>
+                    </div>
+                    {{{_sections.header}}} {{{_sections.condition}}}
+                </div>
+                {{/if}}
+
+            </header>
+
+            <section id="loading"></section>
+
+            <section class="wrapper">
+                <section class="scroller">
+
+                {{{content}}}
+
+                <footer>
+                    <div class="app_footerSection">
+                        <div class="app_footerSection_btns">
+                            <a class="touch" href="http://{{website.hostName}}"><span><i  class="pc"></i>电脑版</span></a>
+                            <span class="noTouch"><span><i  class="phone"></i>触屏版</span></span>
+                        </div>
+                        <div class="app_footerSection_remarks">
+                            <span class="remarks">易记域名：{{website.hostName}}</span>
+                            <span class="remarks">©2016  52开奖网  版权所有</span>
+                        </div>
+                    </div>
+                </footer>
+              </section>
+        </section>
+
+        </section>
+        <!--<script type="text/javascript" src="{{cdnUrl}}/static/{{skin}}/js/common.js"></script>-->
+        {{#if layout.js}} {{> (iPartials type='js') }} {{/if}}{{{_sections.js}}}
+
+    </body>
+
+</html>

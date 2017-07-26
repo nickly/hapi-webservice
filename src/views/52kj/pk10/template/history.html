@@ -1,0 +1,33 @@
+
+<table>
+    <tr>
+        <th>期数</th>
+        <th>时间</th>
+        <th><div class="app_table_menuBlock">
+            <span><i class="active" data-type="number">号码</i></span>
+            <span><i data-type="dx">大小</i></span>
+            <span><i data-type="ds">单双</i></span>
+            <span><i data-type="dz">对子</i></span>
+            <span class="table_req_filter"><i>筛选</i><b class="table_requirement"></b></span>
+        </div></th>
+    </tr>
+    {{#if historyList}} {{#each historyList}}
+    <tr>
+        <td>{{Period}}</td>
+        <td>{{iDateTime DrawingTime}}</td>
+        <td><div class="app_lotterySection  app_lotteryStyle1">
+            <ul>
+                {{#each NumberList }}
+                <li><span class="num{{this}} bg"  numberclass="num{{this}} bg"   datatype="{{this}}">{{this}}</span></li>
+                {{/each}}
+            </ul>
+        </div></td>
+    </tr>
+    {{/each}} {{else}}
+    <tr>
+        <td colspan="3">
+            <p>没有获取到数据</p>
+        </td>
+    </tr>
+    {{/if}}
+</table>

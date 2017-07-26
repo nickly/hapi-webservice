@@ -1,0 +1,328 @@
+@charset "utf-8";
+/*********************************************公用库**********************************************/
+@import "../../libs/Library";
+@import "../../libs/codeBlock";
+/*********************************************自己代码********************************************/
+
+
+.app_index_Scope{        /************************ 首页作用域 ************************/
+
+      .app_adSection{
+         width: 100%;
+         height: auto;
+      }
+
+      .app_contentSection{
+         width: 100%;
+         padding: pxChangeRem(16);
+         padding-top: pxChangeRem(20);
+         padding-bottom: pxChangeRem(4);
+         box-sizing: border-box;
+         background-color: #e8e8eb;
+      }
+
+      .app_colorLis{
+          width: 100%;
+          height: auto;
+          background-color: #fff;
+          border-radius: pxChangeRem(10);
+          margin-bottom: pxChangeRem(16);
+          padding: pxChangeRem(20) 0;
+          box-sizing: border-box;
+      }
+
+      .app_colorLis_title{
+          width: 100%;
+          position: relative;
+          padding: 0 pxChangeRem(18);
+          box-sizing: border-box;
+
+          .app_colorLis_titleLeft{
+              width: 100%;
+              height: pxChangeRem(45);
+              padding-right: pxChangeRem(185);
+              box-sizing: border-box;
+              @extend %private_HiddenFullFont;
+              line-height: pxChangeRem(45);
+          }
+
+          .app_lotteryName {
+            float: left;
+            max-width: pxChangeRem(200);
+            @extend %private_HiddenFullFont;
+            font-size: pxChangeRem(30);
+            color: #333;
+          }
+
+          .app_periodsNumber {
+            float: left;
+            font-size: pxChangeRem(22);
+            color: #666;
+            margin-left: pxChangeRem(10);
+
+            i {
+              white-space: nowrap;
+            }
+          }
+
+          .nextLotteryTime{
+              width: pxChangeRem(206);
+              height: pxChangeRem(45);
+              position: absolute;
+              right: pxChangeRem(18);
+              top: pxChangeRem(2);
+              font-size: pxChangeRem(22);
+              text-align: right;
+              line-height: pxChangeRem(45);
+              color: #666;
+              white-space: nowrap;
+
+              i{
+                  margin-left: pxChangeRem(10);
+                  color: #ed1c24;
+                font-weight: bold;
+              }
+          }
+      }
+
+      .app_lotterySection{
+          width: 100%;
+          padding: pxChangeRem(10) pxChangeRem(8);
+          box-sizing: border-box;
+      }
+
+
+   .app_colorLis_select{
+       width: 100%;
+       padding: 0 pxChangeRem(18);
+       padding-top: pxChangeRem(8);
+       box-sizing: border-box;
+       @extend %private_Clear_Fix;
+
+      li{
+          width: 25%;
+          height: pxChangeRem(55);
+          float: left;
+          padding-right: pxChangeRem(7);
+          padding-left: pxChangeRem(7);
+          box-sizing: border-box;
+
+          &:nth-child(4n+1){
+             padding-right: pxChangeRem(7);
+             padding-left: pxChangeRem(0);
+          }
+          &:nth-child(4n){
+               padding-right: pxChangeRem(0);
+               padding-left: pxChangeRem(7);
+            }
+
+          a{
+             width: 100%;
+             height: pxChangeRem(40);
+             border: 1px solid #cbcbcb;
+             color: #333;
+             font-size: pxChangeRem(26);
+             text-align: center;
+             line-height: pxChangeRem(40);
+             display: block;
+             border-radius: pxChangeRem(6);
+             cursor: pointer;
+
+
+             &:hover,&.active,&:active{
+                background-color: $orangeColor;
+                color: #fff;
+                border-color: $orangeColor;
+             }
+          }
+       }
+   }
+
+   .app_billboard{
+      width: 100%;
+      font-size: 0rem;
+      padding-left: pxChangeRem(20);
+      padding-bottom: pxChangeRem(6);
+      box-sizing: border-box;
+
+      span{
+         color: #666;
+         font-size: pxChangeRem(24);
+         display: inline-block;
+         margin-right: pxChangeRem(25);
+      }
+   }
+
+   .app_colorLis_ad{
+       width: 100%;
+       position: relative;
+       padding: 0 pxChangeRem(18);
+       padding-left: pxChangeRem(100);
+       padding-top: pxChangeRem(8);
+       box-sizing: border-box;
+       color: #333;
+       font-size: pxChangeRem(26);
+
+
+       .tips{
+           width: pxChangeRem(60);
+           height: pxChangeRem(30);
+           border: 1px solid #ed1c24;
+           color: #ed1c24;
+           font-size: pxChangeRem(22);
+           border-radius: pxChangeRem(4);
+           text-align: center;
+           line-height: pxChangeRem(30);
+           position: absolute;
+           left: pxChangeRem(18);
+           top: pxChangeRem(10);
+       }
+
+       .fontContent{
+           width: 100%;
+           height: pxChangeRem(34);
+           line-height: pxChangeRem(34);
+           @extend %private_HiddenFullFont;
+       }
+   }
+
+   .app_skill{
+      width: 100%;
+      background-color: #fff;
+      border-radius: pxChangeRem(10);
+      padding: 0 pxChangeRem(20);
+      box-sizing: border-box;
+
+      .app_skill_title{
+         width: 100%;
+         line-height: pxChangeRem(70);
+         border-bottom: 1px solid #e0e0e0;
+         font-size: pxChangeRem(32);
+      }
+      .app_skill_Content{
+         width: 100%;
+
+         ul{
+            width: 100%;
+            display: block;
+            padding: pxChangeRem(10) 0;
+            padding-bottom: pxChangeRem(20);
+
+            li{
+               width: 100%;
+               display: block;
+               height: pxChangeRem(50);
+               line-height: pxChangeRem(50);
+               @extend %private_HiddenFullFont;
+
+               a:first-child{
+                  color: $orangeColor;
+                  text-decoration: none;
+                  font-size: pxChangeRem(26);
+                 margin-right: pxChangeRem(10);
+               }
+               a:last-child{
+                  color: #333;
+                  text-decoration: none;
+                  font-size: pxChangeRem(26);
+               }
+            }
+         }
+      }
+   }
+}
+
+
+.app_luZhu_Scope{           /************************ 路珠作用域 ************************/
+
+  .app_luZhu_Block{
+     width: 100%;
+
+     .app_luZhu_title{
+         width: 100%;
+         height: pxChangeRem(63);
+         line-height: pxChangeRem(63);
+         font-size: pxChangeRem(26);
+         text-align: center;
+     }
+    .app_luZhu_list{
+        width: 100%;
+        border-top: 1px solid #d1d1d1;
+        border-bottom: 1px solid #d1d1d1;
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        table{
+           display: block;
+           @extend %private_Clear_Fix;
+           transform: translateZ(0);
+
+           td{
+              color: #1c26ed;
+              padding: pxChangeRem(6) 0;
+
+              span{
+                 width: pxChangeRem(47);
+                 height: pxChangeRem(38);
+                 line-height: pxChangeRem(38);
+                 text-align: center;
+                 display: block;
+                 font-size: pxChangeRem(24);
+                &.fontGreen{
+                  color: green;
+                }
+                &.fontRed{
+                  color: #ed1c24;
+                }
+                &.fontBlue{
+                  color: #1c26ed;
+                }
+              }
+
+              &:nth-child(odd){
+                background-color: #f1f1f1;
+                color: #ed1c24;
+              }
+
+           }
+        }
+    }
+  }
+
+  .app_luZhu_tips{
+     width: 100%;
+     padding: pxChangeRem(8) pxChangeRem(15);
+     box-sizing: border-box;
+     background-color: #fffbe3;
+     color: #333;
+     font-size: pxChangeRem(18);
+     border-bottom: 1px solid #d1d1d1;
+
+     span{
+        display: block;
+        padding-left: pxChangeRem(30);
+        position: relative;
+
+        i.lamp{
+           width: pxChangeRem(26);
+           height: pxChangeRem(25);
+           display: block;
+           position: absolute;
+           left: 0rem;
+           top: 0rem;
+           @extend %app_lamp;
+        }
+     }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,195 @@
+<section class="app_index_Scope">
+    <div class="app_adSection">
+        <div class="app_adSwiper">
+            <ul id="app_swiperContainer">
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="app_contentSection">
+
+        <div class="app_colorLis">
+            <a href='/pk10/history'>
+                <div class="app_colorLis_title">
+                    <div class="app_colorLis_titleLeft">
+                        <span class="app_lotteryName">北京赛车PK10</span>
+                        <span class="app_periodsNumber"><i id="period_pk10"></i>期</span>
+                    </div>
+                    <div class="nextLotteryTime" id="awardData_pk10">距下期开奖<i id="awardTime_pk10"></i></div>
+                </div>
+
+                <div class="app_lotterySection  app_lotteryStyle">
+                    <ul id="lotteryData_pk10">
+                    </ul>
+                </div>
+
+                <div class="app_billboard" id="lotteryInfo_pk10">
+                </div>
+            </a>
+            <div class="app_colorLis_ad" id="ad_1" style="display: none;">
+                <span class="tips">广告</span>
+                <span class="fontContent" id="adcontent_1"></span>
+            </div>
+
+        </div>
+
+        <div class="app_colorLis">
+            <a href='/cqssc/history'>
+                <div class="app_colorLis_title">
+                    <div class="app_colorLis_titleLeft">
+                        <span class="app_lotteryName">重庆时时彩</span>
+                        <span class="app_periodsNumber"><i id="period_cqssc"></i>期</span>
+                    </div>
+                    <div class="nextLotteryTime" id="awardData_cqssc">距下期开奖<i id="awardTime_cqssc"></i></div>
+                </div>
+
+                <div class="app_lotterySection  app_lotteryStyle2">
+                    <ul id="lotteryData_cqssc">
+
+                    </ul>
+                </div>
+
+
+                <div class="app_billboard" id="lotteryInfo_cqssc">
+
+                </div>
+            </a>
+            <div class="app_colorLis_ad" id="ad_2" style="display: none;">
+                <span class="tips">广告</span>
+                <span class="fontContent" id="adcontent_2"></span>
+            </div>
+
+        </div>
+
+        <div class="app_colorLis">
+            <a href='/jsk3/history'>
+                <div class="app_colorLis_title">
+                    <div class="app_colorLis_titleLeft">
+                        <span class="app_lotteryName">江苏快3</span>
+                        <span class="app_periodsNumber"><i id="period_jsk3"></i>期</span>
+                    </div>
+                    <div class="nextLotteryTime" id="awardData_jsk3">距下期开奖<i id="awardTime_jsk3"></i></div>
+                </div>
+
+
+                <div class="app_lotterySection  app_lotteryStyle3">
+                    <ul id="lotteryData_jsk3">
+
+                    </ul>
+                </div>
+
+
+                <div class="app_billboard" id="lotteryInfo_jsk3">
+
+                </div>
+            </a>
+            <div class="app_colorLis_ad" id="ad_3" style="display: none;">
+                <span class="tips">广告</span>
+                <span class="fontContent" id="adcontent_3"></span>
+            </div>
+
+        </div>
+
+        <div class="app_colorLis">
+            <a href='/xync/history'>
+                <div class="app_colorLis_title">
+                    <div class="app_colorLis_titleLeft">
+                        <span class="app_lotteryName">幸运农场</span>
+                        <span class="app_periodsNumber"><i id="period_xync"></i>期</span>
+                    </div>
+                    <div class="nextLotteryTime" id="awardData_xync">距下期开奖<i id="awardTime_xync"></i></div>
+                </div>
+
+                <div class="app_lotterySection  app_lotteryStyle4">
+                    <ul id="lotteryData_xync">
+
+                    </ul>
+                </div>
+                <div class="app_billboard" id="lotteryInfo_xync">
+
+                </div>
+            </a>
+            <!--<div class="app_colorLis_select">
+                <li><a href="">历史开奖</a></li>
+                <li><a href="">开奖直播</a></li>
+                <li><a href="">推荐计划</a></li>
+                <li><a href="">技巧文章</a></li>
+            </div>-->
+
+            <div class="app_colorLis_ad" id="ad_4" style="display: none;">
+                <span class="tips">广告</span>
+                <span class="fontContent" id="adcontent_4"></span>
+            </div>
+        </div>
+
+        <div class="app_colorLis">
+            <a href='/gdkl10/history'>
+                <div class="app_colorLis_title">
+                    <div class="app_colorLis_titleLeft">
+                        <span class="app_lotteryName">广东快乐十分</span>
+                        <span class="app_periodsNumber"><i id="period_gdkl10"></i>期</span>
+                    </div>
+                    <div class="nextLotteryTime" id="awardData_gdkl10">距下期开奖<i id="awardTime_gdkl10"></i></div>
+                </div>
+
+                <div class="app_lotterySection  app_lotteryStyle2">
+                    <ul id="lotteryData_gdkl10">
+
+                    </ul>
+                </div>
+
+
+                <div class="app_billboard" id="lotteryInfo_gdkl10">
+
+                </div>
+            </a>
+            <div class="app_colorLis_ad" id="ad_5" style="display: none;">
+                <span class="tips">广告</span>
+                <span class="fontContent" id="adcontent_5"></span>
+            </div>
+
+        </div>
+
+
+        <div class="app_skill">
+            <div class="app_skill_title">
+                高频彩技巧
+            </div>
+            <div class="app_skill_Content">
+                <ul>
+                    {{#if articles.List}} {{#each articles.List}}
+                    <li><a href="/article/list?sumId={{this.SubcolumnId}}">[{{this.LotteryName}}]</a><a href="/article/details?id={{this.Id}}&home=true">{{subString this.Title 18}}</a></li>
+                    {{/each}} {{else}}
+                    <li><a>无任何数据</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'index/index'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, indexCallBack) {
+
+        //publicCallBack.createLoading($('#loading'));
+
+        $(document).ready(function() {
+            indexCallBack.init();
+
+        })
+
+    })
+</script>
+{{/section}}

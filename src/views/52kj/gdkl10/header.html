@@ -1,0 +1,39 @@
+<div class="header_info">
+    <span class="header_date"><input value="{{now}}" class="header_dateInput" readonly="true" onfocus="this.blur()" id="date"><span class="font">{{day}}</span></span>
+    <span class="header_text"><i awardPeriod="0" >距000期开奖：</i><b awardTime="0">00:00</b></span>
+    <!--<a href="/gdkl10/video" target="_blank"><span class="header_video">开奖直播</span></a>-->
+    {{#if Help}}
+    <span class="header_help"></span> {{/if}}
+</div>
+
+
+<div class="header_select header_select_jsk3">
+    <div class="header_selectBlock">
+        <div class="app_swiperSelectBlock" id="app_swiperSelect">
+            <table>
+                <tr>
+                    {{#each page.items}} {{#ifExt this.url ../page.default 'eq'}}
+                    <td class="active">
+                        {{else}}
+                        <td>
+                            {{/ifExt}}
+                    <span><a href="/{{../code}}/{{this.url}}">{{this.text}}</a></span></td>
+                        {{/each}}
+            </table>
+        </div>
+        <!--<div class="app_swiperSelectMore" id="selectMoreButton"></div>-->
+    </div>
+    <div class="header_selectList" id="header_selectList">
+        <ul>
+            {{#each page.items}} {{#ifExt this.url ../ page.default 'eq'}}
+            <li class="active">
+                <a href="/{{../code}}/{{this.url}}"><span>{{this.text}}</span></a>
+            </li>
+            {{else}}
+            <li>
+                <a href="/{{../code}}/{{this.url}}"><span>{{this.text}}</span></a>
+            </li>
+            {{/ifExt}} {{/each}}
+        </ul>
+    </div>
+</div>

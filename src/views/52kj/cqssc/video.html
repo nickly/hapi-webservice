@@ -1,0 +1,75 @@
+ {{#section 'header'}} {{/section}}
+<style>
+    .app_video_iframeBlock {
+        height: calc(100vw / 1.55);
+    }
+</style>
+<section class="app_index_Scope">
+
+
+    <!--视频 start-->
+    <div class="app_video_iframeBlock">
+        <iframe id="player1" frameborder="no" width="100%" height="640" border="0" marginwidth="0" marginheight="0" scrolling="no" src="http://{{website.videoHostName}}/shishicai/h5shipin/"></iframe>
+    </div>
+    <!--视频 end-->
+
+    <!--温馨提示 start-->
+    <div class="app_video_tipsBlock">温馨提示：横放手机即可全屏观看，若无法全屏请解除手机系统的屏幕方向锁定再次尝试横放。<span class="tips_close"></span></div>
+    <!--温馨提示 end-->
+
+
+
+
+    <div class="app_public_tableBlock">
+        <table>
+            <tr>
+                <th width="35%">期数</th>
+                <th width="20%">时间</th>
+                <th>
+                    <div class="app_table_menuBlock2">开奖号码</div>
+                </th>
+            </tr>
+
+            <tbody id='historyList'>
+                {{#if historyList}} {{#each historyList}}
+                <tr>
+                    <td>{{PeriodNumber}}</td>
+                    <td>{{iDateTime DrawingTime}}</td>
+                    <td>
+                        <div class="app_lottery_cqssc">
+                            {{#each NumberList}}
+                            <i>{{this}}</i> {{/each}}
+                        </div>
+                    </td>
+                </tr>
+                {{/each}} {{else}}
+                <tr>
+                    <td colspan="3">
+                        <p>没有获取到数据</p>
+                    </td>
+                </tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+{{#section 'footer'}}
+<!-- 自定脚部内容 -->
+{{/section}} {{#section 'js'}}
+<script type="text/javascript">
+    var pathArray = [
+        'public/index',
+        'lottery/cqssc/video'
+    ];
+
+    seajs.use(pathArray, function(publicCallBack, indexCallBack) {
+
+        $(document).ready(function() {
+            indexCallBack.init();
+        });
+    });
+</script>
+{{/section}}

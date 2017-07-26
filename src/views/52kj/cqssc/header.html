@@ -1,0 +1,37 @@
+<div class="header_info">
+    {{#if dateOption}}
+    <span class="header_date"><input value="{{lottery.day}}" class="header_dateInput" readonly="true" onfocus="this.blur()" id="date"><span class="font">{{lottery.day}}</span></span>
+    {{/if}}
+    <span class="header_text"><i>距000期开奖：</i><b>00:00</b></span>
+    <a href="/cqssc/video"><span class="header_video">开奖直播</span></a> {{#if Help}}<span class="header_help"></span> {{/if}}
+</div>
+
+<div class="header_select">
+    <div class="header_selectBlock">
+        <div class="app_swiperSelectBlock" id="app_swiperSelect">
+            <table>
+                <tr>
+                    <td data-method='history' {{#ifExt router.action 'history' 'eq'}} class="active" {{/ifExt}}>
+                    <span><a href="/cqssc/history">历史开奖</a></span>
+                    </td>
+                    <td data-method='bigorsmall' {{#ifExt router.action 'bigorsmall' 'eq'}} class="active" {{/ifExt}}>
+                    <span><a href="/cqssc/bigorsmall">单双大小路珠</a></span>
+                    </td>
+                    <td data-method='numberstat' {{#ifExt router.action 'numberstat' 'eq'}} class="active" {{/ifExt}}>
+                    <span><a href="/cqssc/numberstat">历史号码统计</a></span>
+                    </td>
+                    <td data-method='hotcold' { {{#ifExt router.action 'hotcold' 'eq'}} class="active" {{/ifExt}}>
+                    <span><a href="/cqssc/hotcold">冷热码分析</a></span>
+                            </td>
+                    <!--<td {{#ifExt router.action 'betgame' 'eq'}} class="active" {{/ifExt}}>
+                        <a href="/cqssc/betgame">  <span>推荐计划</span>
+                            </td>
+                        </tr>-->
+                    </table>
+                </div>
+                <div class="app_swiperSelectMore" id="selectMoreButton"></div>
+            </div>
+            <div class="header_selectList" id="header_selectList">
+                <ul></ul>
+        </div>
+    </div>
